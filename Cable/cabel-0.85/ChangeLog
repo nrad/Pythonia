@@ -1,0 +1,69 @@
+2006-03-01  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	*  Release 0.85
+
+2006-02-27  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	* modules/amps mixers/Panning.xml: New module Panning
+
+	* examples/external_square_ringmod.cw: New patch
+
+	* view/controller.py (onMouseMotion): Show range of inVar in statusbar at end of line
+
+	* modules/amps mixers/CrossFader.xml: New module CrossFader
+
+2006-02-24  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	* view/controller.py (onShowModuleXML): Fixed error with module paths with included whitespace.
+
+2006-02-24 Matthias Thar <hiast2@web.de>
+
+	* view/controller.py:
+		+ Show valueFrame only when module has inputs.
+		+ Additionaly to the description and eventually actual value of 
+		  an input show allowed range for input value in statusbar.
+		+ onShowModuleXml(): Show module xml file in editor.
+	* view/workspace.py:
+		+ Add Show Module Xml entry to module menu if external editor is specified.
+	* tools/config.py:
+		+ specify external editor to use within Cabel.
+		+ allow empty values for file/directory chooser vars.
+	* view/configurator:
+		+ File/Directory chooser bind Kill_Focus Event to textcontrol of 
+		  File-/DirBrowseButton control instead of the control itself.
+	
+
+2006-02-23  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	*  (Module): New MoogVfc2.xml module (audio input doesn't need an amplitude <= 1)
+	(Module): Two new FM patches in example directory.
+
+
+2006-02-05  Matthias Thar  <hiast2@web.de>
+
+	* tools/config.py (CSound.fillWithDefaults):
+		+ added '-+rtmidi=mme' to the standard csound params. MSW plattforms don't need the protmidi plugin
+		  as midi suport comes with the standard mme implementation.
+
+	* view/workspace.py: Refactoring and Documentation
+	
+	* model/csound.py (_startCsoundOnMSW): 
+		+ Bugfix: csound process output reapears on the calling console
+	
+
+2006-01-11  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	* view/controller.py (onMouseMotion): instead of showing the mouse
+	coordinates in the statusbar show the instrument number of the
+	module under point
+
+	
+2005-12-14  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	*  Release 0.8
+
+
+2005-01-19  Sebastian Gutsfeld  <segoh@gmx.net>
+
+	* cable: initial version.
+

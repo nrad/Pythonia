@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>~/home/c/sonic/tutorial.py.html</title>
+<meta name="Generator" content="Vim/6.0">
+</head>
+<body bgcolor="#808080" text="#ffffff">
+<pre>
+<font color="#ffff00"><b>  1</b></font>  <font color="#00ffff"><b>#!/usr/bin/env python</b></font>
+<font color="#ffff00"><b>  2</b></font>
+<font color="#ffff00"><b>  3</b></font>  <span style="background-color: #808080"><font color="#ffffff"><b>&quot;&quot;&quot;</b></font></span>
+<font color="#ffff00"><b>  4</b></font>  <font color="#ff40ff"><b>Here are some examples to wet your appetite.</b></font>
+<font color="#ffff00"><b>  5</b></font>  <font color="#ff40ff"><b>To run them, use the number as arg, eg.</b></font>
+<font color="#ffff00"><b>  6</b></font>  <font color="#ff40ff"><b>$ ./tutorial.py 5</b></font>
+<font color="#ffff00"><b>  7</b></font>  <font color="#ff40ff"><b>Make sure the volume is turned down first!</b></font>
+<font color="#ffff00"><b>  8</b></font>  <span style="background-color: #808080"><font color="#ffffff"><b>&quot;&quot;&quot;</b></font></span>
+<font color="#ffff00"><b>  9</b></font>
+<font color="#ffff00"><b> 10</b></font>  <font color="#8080ff"><b>from</b></font> Sonic <font color="#8080ff"><b>import</b></font> *
+<font color="#ffff00"><b> 11</b></font>
+<font color="#ffff00"><b> 12</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test00</b></font>():
+<font color="#ffff00"><b> 13</b></font>    <font color="#00ffff"><b># play a sin wave</b></font>
+<font color="#ffff00"><b> 14</b></font>    sin = Sin() <font color="#00ffff"><b># make a task</b></font>
+<font color="#ffff00"><b> 15</b></font>    sin | Dsp() <font color="#00ffff"><b># connect it to a soundcard task</b></font>
+<font color="#ffff00"><b> 16</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b> 17</b></font>      sin.push() <font color="#00ffff"><b># push signal upstream</b></font>
+<font color="#ffff00"><b> 18</b></font>
+<font color="#ffff00"><b> 19</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test01</b></font>():
+<font color="#ffff00"><b> 20</b></font>    f = 440.0
+<font color="#ffff00"><b> 21</b></font>    sin = Sin(f)
+<font color="#ffff00"><b> 22</b></font>    sin | Dsp()
+<font color="#ffff00"><b> 23</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b> 24</b></font>      sin.push()
+<font color="#ffff00"><b> 25</b></font>      f *= 0.99
+<font color="#ffff00"><b> 26</b></font>      sin.set_f(f) <font color="#00ffff"><b># change the frequency</b></font>
+<font color="#ffff00"><b> 27</b></font>
+<font color="#ffff00"><b> 28</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test02</b></font>():
+<font color="#ffff00"><b> 29</b></font>    <font color="#00ffff"><b># mixing sources</b></font>
+<font color="#ffff00"><b> 30</b></font>    sins = [ Sin(110 + i*110, 0.2) <font color="#ffff00"><b>for</b></font> i <font color="#ffff00"><b>in</b></font> <font color="#00ffff"><b>range</b></font>(5) ]
+<font color="#ffff00"><b> 31</b></font>    dsp = Dsp()
+<font color="#ffff00"><b> 32</b></font>    add = Add()
+<font color="#ffff00"><b> 33</b></font>    <font color="#ffff00"><b>for</b></font> sin <font color="#ffff00"><b>in</b></font> sins:
+<font color="#ffff00"><b> 34</b></font>      sin | add
+<font color="#ffff00"><b> 35</b></font>    add | dsp
+<font color="#ffff00"><b> 36</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b> 37</b></font>      <font color="#00ffff"><b># a single push won't work here, so we</b></font>
+<font color="#ffff00"><b> 38</b></font>      <font color="#00ffff"><b># pull from downstream</b></font>
+<font color="#ffff00"><b> 39</b></font>      dsp.pull()
+<font color="#ffff00"><b> 40</b></font>
+<font color="#ffff00"><b> 41</b></font>  <font color="#00ffff"><b># Task objects process signals</b></font>
+<font color="#ffff00"><b> 42</b></font>  <font color="#00ffff"><b># obtained from Buffer objects (memory)</b></font>
+<font color="#ffff00"><b> 43</b></font>  <font color="#00ffff"><b># via Pipe objects (smart pointers).</b></font>
+<font color="#ffff00"><b> 44</b></font>
+<font color="#ffff00"><b> 45</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test03</b></font>():
+<font color="#ffff00"><b> 46</b></font>    sin = Sin() <font color="#00ffff"><b># a Task</b></font>
+<font color="#ffff00"><b> 47</b></font>    dsp = Dsp() <font color="#00ffff"><b># a Task</b></font>
+<font color="#ffff00"><b> 48</b></font>
+<font color="#ffff00"><b> 49</b></font>    <font color="#00ffff"><b># sin | dsp</b></font>
+<font color="#ffff00"><b> 50</b></font>    buf = Buffer() <font color="#00ffff"><b># a Buffer</b></font>
+<font color="#ffff00"><b> 51</b></font>    p1 = Pipe( sin, buf )  <font color="#00ffff"><b># open a Pipe</b></font>
+<font color="#ffff00"><b> 52</b></font>    p2 = Pipe( buf, dsp ) <font color="#00ffff"><b># another Pipe</b></font>
+<font color="#ffff00"><b> 53</b></font>
+<font color="#ffff00"><b> 54</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b> 55</b></font>      sin.push()
+<font color="#ffff00"><b> 56</b></font>
+<font color="#ffff00"><b> 57</b></font>
+<font color="#ffff00"><b> 58</b></font>  <font color="#00ffff"><b># pipes can be told to limit how much they read or write.</b></font>
+<font color="#ffff00"><b> 59</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test04</b></font>():
+<font color="#ffff00"><b> 60</b></font>    sin1 = Sin(110)
+<font color="#ffff00"><b> 61</b></font>    sin2 = Sin(220)
+<font color="#ffff00"><b> 62</b></font>    dsp = Dsp()
+<font color="#ffff00"><b> 63</b></font>    buf = Buffer()
+<font color="#ffff00"><b> 64</b></font>
+<font color="#ffff00"><b> 65</b></font>    <font color="#00ffff"><b># a utility function (!alias pipe)</b></font>
+<font color="#ffff00"><b> 66</b></font>    <font color="#00ffff"><b># that makes pipes between tasks and buffers:</b></font>
+<font color="#ffff00"><b> 67</b></font>    p1, p2 = connect( sin1, buf, dsp )
+<font color="#ffff00"><b> 68</b></font>
+<font color="#ffff00"><b> 69</b></font>    p1.rlimit( 4096 )
+<font color="#ffff00"><b> 70</b></font>    <font color="#00ffff"><b># ! this uses a bytecount:</b></font>
+<font color="#ffff00"><b> 71</b></font>    <font color="#00ffff"><b># ! each (mono) sample is 2 bytes (a short)</b></font>
+<font color="#ffff00"><b> 72</b></font>    <font color="#00ffff"><b># ! so we will get 2048 samples, at 44100 samples/second</b></font>
+<font color="#ffff00"><b> 73</b></font>    <font color="#00ffff"><b># ! this is about 1/20th second</b></font>
+<font color="#ffff00"><b> 74</b></font>
+<font color="#ffff00"><b> 75</b></font>    null_log() <font color="#00ffff"><b># turn off logging</b></font>
+<font color="#ffff00"><b> 76</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b> 77</b></font>      <font color="#ffff00"><b>while</b></font> <font color="#ffff00"><b>not</b></font> p1.done():
+<font color="#ffff00"><b> 78</b></font>        dsp.pull()
+<font color="#ffff00"><b> 79</b></font>      p1.close()
+<font color="#ffff00"><b> 80</b></font>      p1 = Pipe( sin2, buf ) <font color="#00ffff"><b># new Pipe</b></font>
+<font color="#ffff00"><b> 81</b></font>      p1.rlimit( 4096 )
+<font color="#ffff00"><b> 82</b></font>      <font color="#ffff00"><b>while</b></font> <font color="#ffff00"><b>not</b></font> p1.done():
+<font color="#ffff00"><b> 83</b></font>        dsp.pull()
+<font color="#ffff00"><b> 84</b></font>      p1.close()
+<font color="#ffff00"><b> 85</b></font>      p1 = Pipe( sin1, buf )
+<font color="#ffff00"><b> 86</b></font>      p1.rlimit( 4096 )
+<font color="#ffff00"><b> 87</b></font>    <font color="#00ffff"><b># blech, sounds terrible ..</b></font>
+<font color="#ffff00"><b> 88</b></font>
+<font color="#ffff00"><b> 89</b></font>  <font color="#00ffff"><b># Most of the tasks deal with short int (2 byte) sample data (no floats!).</b></font>
+<font color="#ffff00"><b> 90</b></font>
+<font color="#ffff00"><b> 91</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test05</b></font>():
+<font color="#ffff00"><b> 92</b></font>    sources = [ Sin(110), Sin(220) ]
+<font color="#ffff00"><b> 93</b></font>    <font color="#00ffff"><b># You could add more oscillators, eg. Tri() or Squ().</b></font>
+<font color="#ffff00"><b> 94</b></font>
+<font color="#ffff00"><b> 95</b></font>    <font color="#00ffff"><b># Use a linear envelope to smooth the changes between sources</b></font>
+<font color="#ffff00"><b> 96</b></font>    w = 128  <font color="#00ffff"><b># smoothing width</b></font>
+<font color="#ffff00"><b> 97</b></font>    W = 4096 <font color="#00ffff"><b># total width</b></font>
+<font color="#ffff00"><b> 98</b></font>    env = Linear(
+<font color="#ffff00"><b> 99</b></font>      <font color="#00ffff"><b># these are linear control points: (width, level) pairs</b></font>
+<font color="#ffff00"><b>100</b></font>      ((w, 1&lt;&lt;14), (W-2*w, 1&lt;&lt;14), (w, 0)) )
+<font color="#ffff00"><b>101</b></font>    <font color="#00ffff"><b># ! Because Linear objects are arithmetic they</b></font>
+<font color="#ffff00"><b>102</b></font>    <font color="#00ffff"><b># ! deal with sample size, which equals bytecount/2</b></font>
+<font color="#ffff00"><b>103</b></font>
+<font color="#ffff00"><b>104</b></font>    ebuf = Buffer() <font color="#00ffff"><b># envelope buffer</b></font>
+<font color="#ffff00"><b>105</b></font>    rmod = RMod() <font color="#00ffff"><b># this will multiply it's inputs</b></font>
+<font color="#ffff00"><b>106</b></font>    dsp = Dsp()
+<font color="#ffff00"><b>107</b></font>    connect( env, ebuf, rmod )
+<font color="#ffff00"><b>108</b></font>    rmod | dsp
+<font color="#ffff00"><b>109</b></font>    sbuf = Buffer() <font color="#00ffff"><b># signal buffer</b></font>
+<font color="#ffff00"><b>110</b></font>    p = Pipe( sources[0], sbuf )
+<font color="#ffff00"><b>111</b></font>    Pipe( sbuf, rmod )
+<font color="#ffff00"><b>112</b></font>    <font color="#00ffff"><b># draw a picture :)</b></font>
+<font color="#ffff00"><b>113</b></font>
+<font color="#ffff00"><b>114</b></font>    p.rlimit(W*2) <font color="#00ffff"><b># ! bytecount</b></font>
+<font color="#ffff00"><b>115</b></font>
+<font color="#ffff00"><b>116</b></font>    null_log() <font color="#00ffff"><b># turn off logging</b></font>
+<font color="#ffff00"><b>117</b></font>    i = 0
+<font color="#ffff00"><b>118</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b>119</b></font>      <font color="#ffff00"><b>while</b></font> <font color="#ffff00"><b>not</b></font> p.done():
+<font color="#ffff00"><b>120</b></font>        dsp.pull()
+<font color="#ffff00"><b>121</b></font>
+<font color="#ffff00"><b>122</b></font>      <font color="#00ffff"><b># check all buffers are empty</b></font>
+<font color="#ffff00"><b>123</b></font>      <font color="#ffff00"><b>while</b></font> dsp.pull():
+<font color="#ffff00"><b>124</b></font>        <font color="#ffff00"><b>pass</b></font>
+<font color="#ffff00"><b>125</b></font>
+<font color="#ffff00"><b>126</b></font>      p.close()
+<font color="#ffff00"><b>127</b></font>      i += 1
+<font color="#ffff00"><b>128</b></font>      p = Pipe( sources[i%<font color="#00ffff"><b>len</b></font>(sources)], sbuf )
+<font color="#ffff00"><b>129</b></font>      p.rlimit(W*2) <font color="#00ffff"><b># ! bytecount</b></font>
+<font color="#ffff00"><b>130</b></font>    <font color="#00ffff"><b># sounds better, huh?</b></font>
+<font color="#ffff00"><b>131</b></font>
+<font color="#ffff00"><b>132</b></font>  <font color="#00ffff"><b># Connected objects (pipes, bufs, tasks) all</b></font>
+<font color="#ffff00"><b>133</b></font>  <font color="#00ffff"><b># reference each other, so we only need to hold</b></font>
+<font color="#ffff00"><b>134</b></font>  <font color="#00ffff"><b># a reference to one of them to keep them from being</b></font>
+<font color="#ffff00"><b>135</b></font>  <font color="#00ffff"><b># garbage collected.</b></font>
+<font color="#ffff00"><b>136</b></font>
+<font color="#ffff00"><b>137</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test06</b></font>():
+<font color="#ffff00"><b>138</b></font>    <font color="#00ffff"><b># </b></font><span style="background-color: #ffff00"><font color="#808080">FIXME</font></span><font color="#00ffff"><b>: files need to be in raw (cdr) format.</b></font>
+<font color="#ffff00"><b>139</b></font>    <font color="#00ffff"><b># use eg. sox to convert from/to wav,aif etc:</b></font>
+<font color="#ffff00"><b>140</b></font>    <font color="#00ffff"><b># $ sox mysound.wav mysound.raw</b></font>
+<font color="#ffff00"><b>141</b></font>    <font color="#00ffff"><b># $ sox -r 44100 -w -s -c 1 mysound.raw mysound.wav</b></font>
+<font color="#ffff00"><b>142</b></font>    <font color="#ffff00"><b>print</b></font> <span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span><font color="#ff40ff"><b> *** WARNING: On OSX and PPC platforms you may need to use ./swab.py to swap the byte order of sample.raw. *** </b></font><span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span>
+<font color="#ffff00"><b>143</b></font>    null_log()
+<font color="#ffff00"><b>144</b></font>    ifile = FileRd( <span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span><font color="#ff40ff"><b>sample.raw</b></font><span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span> ) <font color="#00ffff"><b># a file reading task</b></font>
+<font color="#ffff00"><b>145</b></font>    dsp = Dsp()
+<font color="#ffff00"><b>146</b></font>    ifile | dsp
+<font color="#ffff00"><b>147</b></font>    <font color="#ffff00"><b>while</b></font> <font color="#ffff00"><b>not</b></font> ifile.done():
+<font color="#ffff00"><b>148</b></font>      ifile.push()
+<font color="#ffff00"><b>149</b></font>
+<font color="#ffff00"><b>150</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test07</b></font>():
+<font color="#ffff00"><b>151</b></font>    sources = [ Sin( 60+80*i, 0.3**i ) <font color="#ffff00"><b>for</b></font> i <font color="#ffff00"><b>in</b></font> <font color="#00ffff"><b>range</b></font>(4) ] +<font color="#ff6060"><b>\</b></font>
+<font color="#ffff00"><b>152</b></font>      [ Tri( 60+81*i, 0.3**i ) <font color="#ffff00"><b>for</b></font> i <font color="#ffff00"><b>in</b></font> <font color="#00ffff"><b>range</b></font>(4) ]
+<font color="#ffff00"><b>153</b></font>    mix = Mix(0.7)
+<font color="#ffff00"><b>154</b></font>    dsp = Dsp()
+<font color="#ffff00"><b>155</b></font>    dsp( mix( *sources )) <font color="#00ffff"><b># connect using the call notation</b></font>
+<font color="#ffff00"><b>156</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b>157</b></font>      dsp.pull()
+<font color="#ffff00"><b>158</b></font>
+<font color="#ffff00"><b>159</b></font>  <font color="#00ffff"><b># a stereo test</b></font>
+<font color="#ffff00"><b>160</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test08</b></font>():
+<font color="#ffff00"><b>161</b></font>    left = Mix()(*[ Sin( 60+80*i, 0.3**i ) <font color="#ffff00"><b>for</b></font> i <font color="#ffff00"><b>in</b></font> <font color="#00ffff"><b>range</b></font>(4) ])
+<font color="#ffff00"><b>162</b></font>    right = Mix()(*[ Sin( 40+81*i, 0.3**i ) <font color="#ffff00"><b>for</b></font> i <font color="#ffff00"><b>in</b></font> <font color="#00ffff"><b>range</b></font>(4) ])
+<font color="#ffff00"><b>163</b></font>    dsp = Dsp(stereo=1)
+<font color="#ffff00"><b>164</b></font>    dsp( Interleave()(left, right) )
+<font color="#ffff00"><b>165</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b>166</b></font>      dsp.pull()
+<font color="#ffff00"><b>167</b></font>
+<font color="#ffff00"><b>168</b></font>  <font color="#00ffff"><b># SDL test</b></font>
+<font color="#ffff00"><b>169</b></font>  <font color="#ffff00"><b>def</b></font> <font color="#00ffff"><b>test09</b></font>():
+<font color="#ffff00"><b>170</b></font>    dsp = Dsp( mode=<span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span><font color="#ff40ff"><b>r</b></font><span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span> ) <font color="#00ffff"><b># read from the soundcard</b></font>
+<font color="#ffff00"><b>171</b></font>    dsp | Trace() <font color="#00ffff"><b># make an oscilloscope window</b></font>
+<font color="#ffff00"><b>172</b></font>    <font color="#ffff00"><b>while</b></font> 1:
+<font color="#ffff00"><b>173</b></font>      dsp.push()
+<font color="#ffff00"><b>174</b></font>
+<font color="#ffff00"><b>175</b></font>  <font color="#ffff00"><b>if</b></font> __name__ == <span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span><font color="#ff40ff"><b>__main__</b></font><span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span>:
+<font color="#ffff00"><b>176</b></font>    <font color="#ffff00"><b>try</b></font>:
+<font color="#ffff00"><b>177</b></font>      i = <font color="#00ffff"><b>int</b></font>(sys.argv[1])
+<font color="#ffff00"><b>178</b></font>      <font color="#ffff00"><b>exec</b></font> <span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span><font color="#ff40ff"><b>test%.2d()</b></font><span style="background-color: #808080"><font color="#ffffff"><b>&quot;</b></font></span>%i
+<font color="#ffff00"><b>179</b></font>    <font color="#ffff00"><b>except</b></font> IndexError:
+<font color="#ffff00"><b>180</b></font>      i = 0
+<font color="#ffff00"><b>181</b></font>      <font color="#ffff00"><b>print</b></font> __doc__
+<font color="#ffff00"><b>182</b></font>
+<font color="#ffff00"><b>183</b></font>
+<font color="#ffff00"><b>184</b></font>
+<font color="#ffff00"><b>185</b></font>
+</pre>
+</body>
+</html>

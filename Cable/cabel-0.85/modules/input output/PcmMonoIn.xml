@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="PcmMonoIn" description="Input for mono signal from sound card">
+  <output>
+    <vardef name="out" csType="a" description="Input from soundcard"/>
+  </output>
+  <opcode>/* Input for mono signal from sound card */
+opcode PcmMonoIn, a, 0
+    aout  in
+    xout aout
+endop
+  </opcode>
+</modul>

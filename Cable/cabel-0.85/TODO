@@ -1,0 +1,13 @@
+- test if csound process is finished for score-driven usage or short midi activation
+- ability to link to external score file
+- add modules for score-driven instruments (input of score parameters, envelopes)
+- add UI or simple language to generate modules
+- key events in ValueFrames should be passed to parent
+- export to module XML => creation of subpatches
+- windows: kill the running csound process in a way that it disapears from taskmanager.
+- link score parameter in preferences dialog to a textfile
+- export to csd into editor
+
+DONE:
+- intead of showing the mouse coordinates in the statusbar show the
+  instrument number of the module at the mouse pointer

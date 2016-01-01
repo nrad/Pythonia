@@ -1,0 +1,31 @@
+-------------------
+README - hYPerSonic
+-------------------
+
+see also index.html
+
+COMPILE
+=======
+
+% ./configure && make
+
+For OSX fix sample.raw (already done in binary release):
+% ./swab.py sample.raw sample.OSX.raw
+% mv sample.OSX.raw sample.raw
+
+If you want this to go (way) fast(er), at the risk of random unexplained
+errors, stick a "-NDEBUG" on the end of the CFLAGS in the Makefile...
+
+INSTALL
+=======
+
+% make install
+
+(and make uninstall)
+
+RUN
+===
+
+This will create/read a file ".hypersonicrc" in your home directory.
+You can set some defaults there, buffer size and soundcard device.
+

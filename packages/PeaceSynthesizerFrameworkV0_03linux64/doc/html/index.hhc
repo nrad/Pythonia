@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="History"><param name="Local" value="History.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Download"><param name="Local" value="Download.html"><param name="ImageNumber" value="11"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Windows"><param name="Local" value="Download.html#Windows"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="v0.02"><param name="Local" value="Download.html#win32v0_02"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="v0.01"><param name="Local" value="Download.html#win32v0_01"><param name="ImageNumber" value="1"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Linux"><param name="Local" value="Download.html#Linux"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="v0.02 64bits"><param name="Local" value="Download.html#linux64v0_02"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="v0.01 64bits"><param name="Local" value="Download.html#linux64v0_01"><param name="ImageNumber" value="1"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Packages"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Packages"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="gl"><param name="Local" value="namespacegl.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudio"><param name="Local" value="namespacepeaceaudio.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib"><param name="Local" value="namespacepeaceaudiolib.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib_base"><param name="Local" value="namespacepeaceaudiolib__base.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peacevisual"><param name="Local" value="namespacepeacevisual.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="postEffect"><param name="Local" value="namespacepostEffect.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Package Functions"><param name="Local" value="namespacemembers.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="namespacemembers.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="namespacemembers_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Classes"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="gl"><param name="Local" value="namespacegl.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="nes"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="nes"><param name="Local" value="classnes_1_1nes.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudio"><param name="Local" value="namespacepeaceaudio.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="wavetype"><param name="Local" value="classpeaceaudio_1_1wavetype.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib"><param name="Local" value="namespacepeaceaudiolib.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceStandardTrack"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a3b9a4ce0a96da2c21ac9c3419b31c4f0"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="generate"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#aef88d0b6ed4cd040ab1a0d8591cc1c93"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setparent"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a20041f16b2d90ec1f4c55351feef40f1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setvolume"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a99212e14ade5b49bef41229606338d9e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="bandlimitedl"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a0bac5e5629cfa1c747ecb5a63baa8cec"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="bandlimitedr"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a9e9049a5607a8f27928ccd8fe87a775b"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="freq"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a068daa06eee5116567bd750749697fa9"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="phase_r"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#aef91d00d7976e4eb9b125179f0f7a216"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="waveshape"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html#a00eee8d8bf0ca39d088bf875306fc331"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudioMixer"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html#a2766dbadc0fe12d9d5f9b355d0b2037f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="addTrack"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html#ae9c318549a55bb4be5673f58b325a378"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="generate"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html#a78a82db10356642e991c7aa9563f6ae8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setparent"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html#a468500e3cadb62ffba3c502bdd6df331"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="parent"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html#af6c31391519d5a1efba256b847290d2c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="tracks"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html#a8e1e7357b60d9c7dcfc0f69379237eb8"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudio"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a572f49546c1cbed4f4f612d463591167"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="cratetable"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a2aceb5096fc88fb38655f68edb7a5528"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="generate"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#af6ac13d957399a3e1b1675e596018def"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="getbufferi"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a65f8376a4ad0013fefd5d701bb70896d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="getbuffermix"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#abff83816538743803603ea0fe2bc9e72"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="getTablesize"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#ab8d5269b04d81ae28d6f9bc17b4533ca"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="init"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#ae16f5ba67728a79abcc207c5c426d3e4"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setBuffer"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a79ace3020cb9544bcc6143dc3857d5d4"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setMixer"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a7b8cdf508b4f686522c24e39ff70d12f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="buffermix"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#ac8f98ee1e2ae70f9b99d5c958a2738b8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="buffersize"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a601939b8c306910c2b7933913788b744"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="data_l"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#ad44b0caefb3a1d7f2311c41e735facb0"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="data_r"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a91460f93b84ce62578d6f877379ea8a7"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="mixer"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#acd8d089a2499b519223a5be157d5dea6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="outch"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a19f2941d086c1899735407519a04ab2f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="samplerate"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a6cd6245f18fe243428c02b43ae3b0f4c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="sinetable"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#acd2c1989f878bc0348e5b97b5bd877c2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="sinetablex"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#aacacbcb62824c43e063e395d28bab631"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="squaretable"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#accad3d95ca60e62beb9e993656a2f592"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="tabletest"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a46367ba20847f38c359ccb26db86a015"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="tracks"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#ab44da1f7642fbe6df220cccb70abc6b0"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="volume"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html#a63a74ba3c7b51592030766856761d62f"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceNESTrack"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#aaf55d5c4193ca8e2caeb8edaa24bd271"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="apu_dpcmreset"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a2134ea9ce1d916e3535bd2e9f47d90c2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="apu_noise"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#af074b2165401d597402993adff8247f5"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="apu_regwrite"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#abb00aac42a5d42779505ae60f9e928b8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="apu_square"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a617329b8e0dc5b9d696e2774e1360814"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="apu_triangle"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a21156de6fdb77a5c63c76ca3cdf5b377"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="compileString"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a2c3188a07a523b0a197d12be75ed7f62"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="DEVICE_START"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a43e2b8aeaacebee024feb000b913cec4"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="freq2time"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a0be0fe1bbaa3b0609a3a22b3337c25ad"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="generate"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a9ef88deb159f066c20548a70f2f27256"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="initStringCompiler"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#ab6b4ab1e0b0d3279378158bfbbf00eb1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setparent"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#ae66dfe8702a1527a3f41c58684defb84"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setvolume"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a1320e79f090ee20e84b2a352bb45fea8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="time2freq"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#ab26e55b8bda6abca771915bcdb003b1c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="clock_rate"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#ab8b9abd88a3be87fdf014ee90e8a7069"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="debug_timingfactorscript"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#aa758acd2554f783b802768b828b9bc71"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="debuger"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a389001f6f99aa58a2d2bcb07cbd33e19"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="freq"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#adce88ff3b3538c81c5cb20f673a5b3e3"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="info"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#aa6a4a04dbfd4fcfd60667675aa3b45d0"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="iscompiledstring"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a8f8849565c6b7acfe0d801f5eb52b1c1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="noisebuffer"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#aea203f5e013e0c10b6ffe43bfdc06403"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="sample_rate"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a8c89a75b16562c0d7040ff0ebb5031ce"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="stringclock"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#aaee5c3a8e67d69102d5d7521dc8b08f8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="stringclockinc"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a4d2d7340e5aed32e5f8baf3c896be58b"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="stringcompiler"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#ab905f2a94ae417040284f723b045548c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="waveshape"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html#a759a5de72b6c73f32a8eaf033c2b6d94"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="_NESStringParser"><param name="Local" value="namespacepeaceaudiolib.html#classpeaceaudiolib_1_1__NESStringParser"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="NESStringCompiler"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#ae1f7d2a0ab415f87737bebf4cd22485d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="compile"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#ad1ea95c5b26336e95126e260eb915622"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="process"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#adf1d2baaf127617e76c5d840e454c0b9"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="alive"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#ab8eb32cfdd1875706e10250593fddddb"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="counter"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a69565f9d4cbe308fae88b563fb82ff30"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="currentline"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a03f987711c9e66a2665ed052000af27c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="data"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a8a6c781724cc3983ac53e7884b589853"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="datalist"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a4e9f6612726f7eeae242d3ddf4b5cac9"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="is32bit"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a62f50204a62ae15f32f691e3c0ab89dc"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="lenline"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#adc7d5ca56383e8160d56968146c0b696"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="lines"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#ae645b505c86581b370a97b1c892432ab"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="linetoparse"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a147a4bc5876a97ff76714cd6d8de7f27"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="timedataflist"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a65ad58ace39fbe014cae60d45393c9d2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="timefactor"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#a4c4916e4970ead9ef880b4579405f761"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="timer"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#aadb87fc47ebfe54f1d1771a95f1b5066"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="track"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html#af8206847b7f68a3f68f929b3e74c144f"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib_base"><param name="Local" value="namespacepeaceaudiolib__base.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudioTrack"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="i_init"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a18d8889278cb67c2d4050aa720d70b89"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="i_setparent"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a15ccb86ecaa7a2fa97cf1fc9d4299429"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="i_setvolume"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a1c14f2adf059af911f80eff68037a2c7"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="count"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a773b740ebba3dc882accf6bffae608aa"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="parent"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a911a280550cd7dd9f1f452d53455b42b"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="phase_l"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a43005d89447079112ff95e146ac83d7a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="phase_r"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#a6b999ce6c1de5b036137c132c6095dc7"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="volume"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html#af69cb512327c72ecae2e142aab888f3d"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peacevisual"><param name="Local" value="namespacepeacevisual.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="GLThread"><param name="Local" value="classpeacevisual_1_1GLThread.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpeacevisual_1_1GLThread.html#a0f9884c2e5bab4a81f96967898ca39ba"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="attach"><param name="Local" value="classpeacevisual_1_1GLThread.html#a57764c1c1e8962e978c451dc1b496586"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="run"><param name="Local" value="classpeacevisual_1_1GLThread.html#a092618d3948286fb34a4c61c37920e95"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="stop"><param name="Local" value="classpeacevisual_1_1GLThread.html#a2a2ddf1b6712baadb9ab382d0d12115d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="stopped"><param name="Local" value="classpeacevisual_1_1GLThread.html#adb8e8b1adbfa773b2194becd00e028b6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="peacelib"><param name="Local" value="classpeacevisual_1_1GLThread.html#a61e05c0fbac775867cc6d0692100557f"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="GLThread2"><param name="Local" value="classpeacevisual_1_1GLThread2.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="postEffect"><param name="Local" value="namespacepostEffect.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Effect"><param name="Local" value="classpostEffect_1_1Effect.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpostEffect_1_1Effect.html#aafad33391c44b5288f81143430d21208"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="process"><param name="Local" value="classpostEffect_1_1Effect.html#ae0121e4294cf88feb022e1d187a890cf"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="name"><param name="Local" value="classpostEffect_1_1Effect.html#a9c4be9bafdd5468ada91e2e38bccf15a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="param"><param name="Local" value="classpostEffect_1_1Effect.html#a73d5cf357bb56df71e2552b51dca7a55"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="paramx"><param name="Local" value="classpostEffect_1_1Effect.html#a2e134529e596244a7c995c185152a67b"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="EffectPlug"><param name="Local" value="classpostEffect_1_1EffectPlug.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__init__"><param name="Local" value="classpostEffect_1_1EffectPlug.html#ae46118b8e00661d25d50c780a9444a3a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="process"><param name="Local" value="classpostEffect_1_1EffectPlug.html#ae0121e4294cf88feb022e1d187a890cf"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="process"><param name="Local" value="classpostEffect_1_1EffectPlug.html#a4c725119d82dadea6a4912d4584b84e5"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setParam"><param name="Local" value="classpostEffect_1_1EffectPlug.html#a95e633ba9d1599b538788bb55b6c35d6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="dll"><param name="Local" value="classpostEffect_1_1EffectPlug.html#aa3088c9e10f8ce21d22f40d18b186f89"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="name"><param name="Local" value="classpostEffect_1_1EffectPlug.html#a24d08b400dac9f75b9088ebd03ebec09"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="param"><param name="Local" value="classpostEffect_1_1EffectPlug.html#a73d5cf357bb56df71e2552b51dca7a55"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="paramx"><param name="Local" value="classpostEffect_1_1EffectPlug.html#a2e134529e596244a7c995c185152a67b"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib._NESStringParser"><param name="Local" value="namespacepeaceaudiolib.html#classpeaceaudiolib_1_1__NESStringParser"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="postEffect.Effect"><param name="Local" value="classpostEffect_1_1Effect.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="postEffect.EffectPlug"><param name="Local" value="classpostEffect_1_1EffectPlug.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="nes.nes"><param name="Local" value="classnes_1_1nes.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib.NESStringCompiler"><param name="Local" value="classpeaceaudiolib_1_1NESStringCompiler.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib.peaceaudio"><param name="Local" value="classpeaceaudiolib_1_1peaceaudio.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib.peaceaudioMixer"><param name="Local" value="classpeaceaudiolib_1_1peaceaudioMixer.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib_base.peaceaudioTrack"><param name="Local" value="classpeaceaudiolib__base_1_1peaceaudioTrack.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudioTrack"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib.peaceNESTrack"><param name="Local" value="classpeaceaudiolib_1_1peaceNESTrack.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudiolib.peaceStandardTrack"><param name="Local" value="classpeaceaudiolib_1_1peaceStandardTrack.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Thread"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peacevisual.GLThread"><param name="Local" value="classpeacevisual_1_1GLThread.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="peacevisual.GLThread2"><param name="Local" value="classpeacevisual_1_1GLThread2.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="peaceaudio.wavetype"><param name="Local" value="classpeaceaudio_1_1wavetype.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Variables"><param name="Local" value="functions_vars.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Examples"><param name="Local" value="examples.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_001a_makesound.py"><param name="Local" value="tu_001a_makesound_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_002a_sound_generation.py"><param name="Local" value="tu_002a_sound_generation_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_003a_Signal_viewer_basic.py"><param name="Local" value="tu_003a_Signal_viewer_basic_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_003a_Signal_viewer_basic_easy.py"><param name="Local" value="tu_003a_Signal_viewer_basic_easy_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_004a_Realtime_Signal_viewer.py"><param name="Local" value="tu_004a_Realtime_Signal_viewer_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_004b_Realtime_Signal_viewer_customization.py"><param name="Local" value="tu_004b_Realtime_Signal_viewer_customization_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="tu_005a_NES_Famicom_sound_emulation.py"><param name="Local" value="tu_005a_NES_Famicom_sound_emulation_8py-example.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+</UL>
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ControlAdd" description="Add two control signals">
+  <input>
+    <vardef name="in1" csType="k" description="First control signal"/>
+    <vardef name="in2" csType="k" description="Second control signal"/>
+  </input>
+  <output>
+    <vardef name="sum" csType="k" description="Sum of input signals"/>
+  </output>
+  <opcode>/* Add two control signals */
+opcode ControlAdd, k, kk
+  kin1, kin2 xin
+  ksum = kin1 + kin2
+  xout ksum
+endop
+  </opcode>
+</modul>

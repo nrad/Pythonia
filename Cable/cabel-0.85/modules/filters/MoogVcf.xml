@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="MoogVcf" description="Moog lowpass filter, to avoid clipping use input signal with max amplitude 1">
+  <input>
+    <vardef name="in" csType="a" min="-1" max="1" description="Audio rate input, to avoid clipping use input signal with max amplitude 1"/>
+    <vardef name="fco" csType="k" value="2000" min="0" description="Filter cut-off frequency"/>
+    <vardef name="res" csType="k" min="0" max="2" description="Filter resonance (self-resonates at 1)"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Filtered audio signal"/>
+  </output>
+  <opcode>/* Moog lowpass filter */
+opcode MoogVcf, a, akk
+  ain, kfco, kres  xin
+
+  ain     limit ain, -1, 1
+  kfco    limit kfco, 0, 50000
+  kres    limit kres, 0, 2
+  aout    moogvcf ain, kfco, kres
+
+  xout aout
+endop
+  </opcode>
+</modul>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ControlSource" description="Control signal source">
+  <input>
+    <vardef name="val" csType="k" description="Control value"/>
+  </input>
+  <output>
+    <vardef name="out" csType="k" description="Output value"/>
+  </output>
+  <opcode>/* Control signal source */
+opcode ControlSource, k, k
+  kval  xin
+  kout = kval
+  xout kval
+endop
+  </opcode>
+</modul>

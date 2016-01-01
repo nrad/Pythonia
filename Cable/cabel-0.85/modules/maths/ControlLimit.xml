@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ControlLimit" description="Limit signal to range from min to max">
+  <input>
+    <vardef name="in" csType="k" description="Input signal"/>
+    <vardef name="min" value="0" csType="k" description="Minimal allowed signal"/>
+    <vardef name="max" value="100" csType="k" description="Maximal allowed signal"/>
+  </input>
+  <output>
+    <vardef name="out" csType="k" description="Limited signal"/>
+  </output>
+  <opcode>/* Limit signal to range from min to max */
+opcode ControlLimit, k, kkk
+  kin, kmin, kmax xin
+  kout limit kin, kmin, kmax
+  xout kout
+endop
+  </opcode>
+</modul>

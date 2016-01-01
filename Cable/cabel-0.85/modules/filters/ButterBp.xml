@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ButterBp" description="A second-order band-pass Butterworth filter">
+  <input>
+    <vardef name="in" csType="a" description="Audio rate input"/>
+    <vardef name="fcf" csType="k" value="2000" min="0" description="Filter center frequency"/>
+    <vardef name="bandwidth" csType="k" value="100" min="0" description="Bandwidth of the filter"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Filtered audio signal"/>
+  </output>
+  <opcode>/* Second-order Butterworth band-pass filter */
+opcode ButterBp, a, akk
+  ain, kfcf, kbandwidth  xin
+
+  kfcf    limit kfcf, 0, 50000
+  kbandwidth limit kbandwidth, 0, 50000
+  aout    butterbp ain, kfcf, kbandwidth
+
+  xout aout
+endop
+  </opcode>
+</modul>

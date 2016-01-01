@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ValveDist" description="Valve distortion">
+  <input>
+    <vardef name="in" csType="a" description="Audio input"/>
+    <vardef name="dist" csType="i" value="0" min="0" max="100" description="Distortion (0 clean, 1 mild, 100 metal)"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Distorted/Enhanced input signal"/>
+  </output>
+  <opcode>/* Valve distortion */
+opcode ValveDist, a, ai
+  ain, idist  xin
+
+  idist    limit     idist, 0, 100
+  aout     =         ain
+
+  if (idist ==0) goto skipdist
+  idist    =         idist*0.01
+  aindc    =         ain*0.5+16384
+  kin      downsamp  ain
+  kdrive   =         (abs(kin)/4096)*idist+1
+  kpower   pow       32767, kdrive, 32767
+  ascale   pow       aindc, kdrive
+  aout     =         (ascale/kpower-16384)*2
+  aout     butterlp  aout, sr*0.5
+
+skipdist:
+  xout aout
+endop
+  </opcode>
+</modul>

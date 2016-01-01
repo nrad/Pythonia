@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="CrossFader" description="Crossfade between two audio signals">
+  <input>
+    <vardef name="in1" csType="a" description="First audio rate signal"/>
+    <vardef name="in2" csType="a" description="Second audio rate signal"/>
+    <vardef name="fade" csType="k" value="0" min="0" max="1" description="Crossfade between in1 (fade=0) and in2 (fade=1)"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Mixed input signals"/>
+  </output>
+  <opcode>/* Crossfade between two audio signals */
+opcode CrossFader, a, aak
+  ain1, ain2, kfade  xin
+  kfade  limit  kfade, 0, 1
+  aout = ain1*(1-kfade) + ain2*kfade
+  xout aout
+endop
+  </opcode>
+</modul>

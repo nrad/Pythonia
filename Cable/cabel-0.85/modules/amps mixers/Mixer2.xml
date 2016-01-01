@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Mixer2" description="Mixer for two audio signals">
+  <input>
+    <vardef name="in1" csType="a" description="First audio rate signal"/>
+    <vardef name="gain1" csType="k" value="1" min="0" description="Amplitude multiplicator for in1"/>
+    <vardef name="in2" csType="a" description="Second audio rate signal"/>
+    <vardef name="gain2" csType="k" value="1" min="0" description="Amplitude multiplicator for in2"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Mixed input signals"/>
+  </output>
+  <opcode>/* Mixer for two audio signals */
+opcode Mixer2, a, akak
+  ain1, kgain1, ain2, kgain2 xin
+  aout = ain1*kgain1 + ain2*kgain2
+  xout aout
+endop
+  </opcode>
+</modul>

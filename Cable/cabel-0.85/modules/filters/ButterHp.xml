@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ButterHp" description="A second-order high-pass Butterworth filter">
+  <input>
+    <vardef name="in" csType="a" description="Audio rate input"/>
+    <vardef name="fco" csType="k" value="2000" min="0" description="Filter cut-off frequency"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Filtered audio signal"/>
+  </output>
+  <opcode>/* Second-order Butterworth high-pass filter */
+opcode ButterHp, a, ak
+  ain, kfco  xin
+
+  kfco    limit kfco, 0, 50000
+  aout    butterhp ain, kfco
+
+  xout aout
+endop
+  </opcode>
+</modul>

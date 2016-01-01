@@ -1,0 +1,15 @@
+TODO
+----
+
+Interface with:
+  libsndfile
+  Open Sound Control
+  LADSPA
+  Numeric/numarray
+
+OSX port (done)
+
+Raise python exceptions where appropriate (instead of aborting...)
+
+Put (more) hacker friendly comments in the source.
+

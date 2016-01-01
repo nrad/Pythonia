@@ -1,0 +1,187 @@
+# Process this file with autoconf to produce a configure script.
+
+AC_INIT(hypersonic, 1.2.0, [simon@arrowtheory.com])
+AC_SUBST([PACKAGE_VERSION])
+AC_PREREQ(2.52)
+
+AC_MSG_NOTICE([Configuring hypersonic])
+
+AC_CANONICAL_HOST
+
+AC_CONFIG_SRCDIR([array.c])
+AC_CONFIG_HEADER([config.h])
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+
+# If GCC, turn on warnings.
+if test "x$GCC" = "xyes"
+then
+        #CFLAGS="$CFLAGS -Wall -W"
+        CFLAGS=" -O3 -Wall"
+else
+        CFLAGS="$CFLAGS -O"
+fi
+
+# Checks for libraries.
+#AC_CHECK_LIB([c], [printf])
+#AC_CHECK_LIB([m], [abs])
+#AC_CHECK_LIB([ncurses], [initscr])
+#AC_CHECK_LIB([pthread], [pthread_mutex_init])
+
+SO_LIBS="-lc -lm -lpthread -lncurses"
+AC_SUBST(SO_LIBS)
+
+
+# Checks for header files.
+#AC_HEADER_STDC
+#AC_CHECK_HEADERS([fcntl.h malloc.h memory.h stddef.h stdlib.h string.h sys/ioctl.h sys/time.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+#AC_C_CONST
+#AC_TYPE_OFF_T
+#AC_TYPE_PID_T
+#AC_TYPE_SIZE_T
+#AC_HEADER_TIME
+
+# Checks for library functions.
+#AC_PROG_GCC_TRADITIONAL
+#AC_FUNC_MALLOC
+#AC_FUNC_MMAP
+#AC_CHECK_FUNCS([atexit floor gettimeofday memmove memset munmap pow select sqrt strstr])
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+LINKER=""
+LFLAGS=""
+
+case "$host" in
+    *-*-linux*) 
+        AC_DEFINE(LINUX)
+        LFLAGS="-shared"
+        LIBS="-lm"
+        PAOBJS="pa_lib.o pa_convert.o pa_unix.o pa_unix_oss.o"
+        LINKER="ld"
+        ;;
+    *-apple-*)
+        AC_DEFINE(MAC_OSX)
+        LFLAGS="-arch ppc -bundle -flat_namespace -undefined suppress -framework CoreAudio"
+        PAOBJS="pa_lib.o pa_convert.o pa_mac_core.o"
+        LINKER="gcc"
+        ;;
+esac
+
+AC_DEFINE(HAVE_PORTAUDIO)
+
+AC_SUBST(LINKER)
+AC_SUBST(LFLAGS)
+AC_SUBST(PAOBJS)
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+AC_CHECK_FILE([/usr/include/execinfo.h], AC_DEFINE(HAVE_EXECINFO) )
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+ISDL=""
+SDLLIB=""
+
+AC_MSG_NOTICE([looking for SDL])
+AC_CHECK_FILE([/usr/include/SDL/SDL.h],
+  AC_DEFINE(HAVE_SDL)
+  SDLLIB="-lSDL"
+  AC_MSG_NOTICE([found SDL]),
+  AC_CHECK_FILE([/usr/local/include/SDL/SDL.h],
+    AC_DEFINE(HAVE_SDL)
+    SDLLIB="-lSDL"
+    AC_MSG_NOTICE([found SDL]),
+    AC_MSG_NOTICE([could not find SDL])
+  )
+)
+
+AC_SUBST(ISDL)
+AC_SUBST(SDLLIB)
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+AC_MSG_NOTICE([looking for OSS sound headers])
+AC_CHECK_FILE([/usr/include/sys/ioctl.h],
+  AC_CHECK_FILE([/usr/include/sys/soundcard.h],
+    [AC_DEFINE(HAVE_OSS)
+    AC_MSG_NOTICE([found OSS headers])],
+    AC_MSG_NOTICE([OSS headers not found])
+  ),
+  AC_MSG_NOTICE([OSS headers not found])
+)
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+IPYTHON=""
+PYTHONSITE=""
+
+AC_MSG_NOTICE([looking for python files])
+
+AC_CHECK_FILE([/usr/lib/python2.2/site-packages],
+  [PYTHONSITE="/usr/lib/python2.2/site-packages"],
+
+  AC_CHECK_FILE([/usr/local/lib/python2.2/site-packages],
+    [PYTHONSITE="/usr/local/lib/python2.2/site-packages"],
+
+    AC_CHECK_FILE([/usr/lib/python2.3/site-packages],
+      [PYTHONSITE="/usr/lib/python2.3/site-packages"],
+
+      AC_CHECK_FILE([/usr/local/lib/python2.3/site-packages],
+        [PYTHONSITE="/usr/local/lib/python2.3/site-packages"],
+        AC_MSG_ERROR( [can't find python installation] )
+      )
+    )
+  )
+)
+
+AC_CHECK_FILE([/usr/include/python2.2/Python.h],
+  [IPYTHON="/usr/include/python2.2"],
+
+  AC_CHECK_FILE([/usr/local/include/python2.2/Python.h],
+    [IPYTHON="/usr/local/include/python2.2"],
+
+    AC_CHECK_FILE([/usr/include/python2.3/Python.h],
+      [IPYTHON="/usr/include/python2.3"],
+
+      AC_CHECK_FILE([/usr/local/include/python2.3/Python.h],
+        [IPYTHON="/usr/local/include/python2.3"],
+        AC_MSG_ERROR( [can't find python developer files] )
+      )
+    )
+  )
+)
+
+AC_SUBST(IPYTHON)
+AC_SUBST(PYTHONSITE)
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+SNDFILE_CFLAGS=""
+SNDFILE_LIBS=""
+
+#PKG_CHECK_MODULES(SNDFILE, sndfile >= 1.0.2, ac_cv_sndfile=1, ac_cv_sndfile=0)
+#
+#AC_DEFINE_UNQUOTED([HAVE_SNDFILE],${ac_cv_sndfile},
+  #[Set to 1 if you have libsndfile.])
+
+AC_SUBST(SNDFILE_CFLAGS)
+AC_SUBST(SNDFILE_LIBS)
+
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
+

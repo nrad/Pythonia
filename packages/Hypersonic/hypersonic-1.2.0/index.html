@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>hYPerSonic</title>
+</head>
+<body bgcolor="#ffffff">
+<a href="../../index.html"><img src="../../ATh.png" border=0 align=right></a><br>
+<h1>hYPerSonic</h1>
+<font size="+0">
+
+<h3>About</h3>
+This is a python/c framework for building and manipulating sound processing pipelines.
+It is designed for real-time control.
+It includes objects for oscillators, filters, file-io, soundcard and memory operations.
+It is low-level: every byte counts.
+Currently works on Linux and OSX.<br>
+
+<h3>Tutorial</h3>
+This is a brief tutorial covering the essentials of the python API.<br>
+<a href="tutorial.py.html">tutorial.py</a> <br>
+
+<h3>Reference</h3>
+This lists all the hypersonic classes.<br>
+<a href="Sonic.html">Sonic</a> <br>
+
+<h3>Plugins</h3>
+Writing your own plugins. Coming soon.
+
+<h3>Downloads</h3>
+Here it is.<br>
+<a href="hypersonic-1.2.tar.gz">hypersonic-1.2.tar.gz</a><br>
+<a href="hypersonic-1.0.2.tar.gz">hypersonic-1.0.2.tar.gz</a><br>
+This is a binary for MacOSX 10.2.<br>
+<a href="hypersonic-1.0.1.bin.OSX.tar.gz">hypersonic-1.0.1.bin.OSX.tar.gz</a><br>
+
+<h3>Dependancies</h3>
+python2.2<br>
+debian: python-dev (rpm: python-devel)<br>
+To compile on OSX you may need this and that developer tools.<br>
+
+<h3>Todo</h3>
+More documentation. Document c API, architecture.<br>
+Distribute binaries.<br>
+Release more scripts (there are many).<br>
+
+<h3>Feedback</h3>
+I'd like to know how you go with this, so I know what to do next.
+Especially from anyone using OSX.
+<a href="mailto:simon@arrowtheory.com">simon@arrowtheory.com</a> <br>
+
+<h3>History</h3>
+Work on this version began late in 2001.
+It was initially intended to be a robust sound engine 
+for my game prototype <a href="../axis-runner/index.html">Axis Runner</a>,
+but it quickly grew out of control.<br>
+I have used this code for real-time performance
+and also studio-time compositions.<br>
+The core has barely changed in the last 12 months; it works, it's tough.<br>
+
+<h3>Music</h3>
+Here are two excerpts from work I have done using this software.<br><br>
+<a href="../../music/river_intro.mp3">The River (introduction)</a>(945K)<br>
+This is from an improvisation.
+I used the Linear task, acoustic feedback with DspRdWr,
+/dev/midi from a keyboard and a simple (230 line) looping script.
+All on a P133.<br><br>
+<a href="../../music/happy.00.mp3">Happy (introduction)</a>(819K)<br>
+This was improvised on an acoustic piano, and then I used fast fourier transform (libfftw, not implemented currently)
+to choose and create extra Sin wave tones.
+It was part of an experiment into algorithms to recognize pitch and melody.<br>
+<br>
+
+<hr>
+<br>
+Copyright (C) Simon Burton 2002, 2003.
+<br>
+<br>
+Last update: Oct 30, 2003
+<br>
+<br>
+<br>
+Mail comments, suggestions, to :
+<a href="mailto:simon@arrowtheory.com">simon@arrowtheory.com</a>
+<br>
+<br>
+</font>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="AudioMultiply" description="Multiply two audio signals">
+  <input>
+    <vardef name="in1" csType="a" value="1" description="First audio signal"/>
+    <vardef name="in2" csType="a" value="1" description="Second audio signal"/>
+  </input>
+  <output>
+    <vardef name="pro" csType="a" description="Product of input signals"/>
+  </output>
+  <opcode>/* Multiply two audio signals */
+opcode AudioMultiply, a, aa
+  ain1, ain2 xin
+  apro = ain1 * ain2
+  xout apro
+endop
+  </opcode>
+</modul>

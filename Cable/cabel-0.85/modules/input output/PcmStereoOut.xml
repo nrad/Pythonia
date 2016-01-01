@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="PcmStereoOut" description="Output stereo signal to sound card">
+  <input>
+    <vardef name="in_l" csType="a" description="Audio input left"/>
+    <vardef name="in_r" csType="a" description="Audio input right"/>
+  </input>
+  <opcode>/* Output stereo signal to sound card */
+opcode PcmStereoOut, 0, aa
+  ain_l, ain_r xin
+     outs ain_l, ain_r
+endop
+  </opcode>
+</modul>

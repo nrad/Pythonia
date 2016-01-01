@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="SlewLimiter" description="Limits the rate of change of an input signal">
+  <input>
+    <vardef name="in" csType="k" description="Input signal"/>
+    <vardef name="time" csType="i" value="0.1" min="0" max="10" description="Slew time in seconds"/>
+  </input>
+  <output>
+    <vardef name="out" csType="k" description="Slew limited input signal"/>
+  </output>
+  <opcode>/* Limits the rate of change of an input signal */
+opcode SlewLimiter, k, ki
+  kin, itime  xin
+
+  kstart init 0
+  kend   = kin
+
+reset:
+  if (kstart == kend) goto contin
+  reinit reset
+
+contin:
+  kout linseg i(kstart), itime, i(kend)
+  rireturn
+
+  kstart = kin
+
+  xout kout
+endop
+  </opcode>
+</modul>

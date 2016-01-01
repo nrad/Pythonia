@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Mixer4" description="Mixer for four audio signals">
+  <input>
+    <vardef name="in1" csType="a" description="First audio rate signal"/>
+    <vardef name="gain1" csType="k" value="1" min="0" description="Amplitude multiplicator for in1"/>
+    <vardef name="in2" csType="a" description="Second audio rate signal"/>
+    <vardef name="gain2" csType="k" value="1" min="0" description="Amplitude multiplicator for in2"/>
+    <vardef name="in3" csType="a" description="Third audio rate signal"/>
+    <vardef name="gain3" csType="k" value="1" min="0" description="Amplitude multiplicator for in3"/>
+    <vardef name="in4" csType="a" description="Fourth audio rate signal"/>
+    <vardef name="gain4" csType="k" value="1" min="0" description="Amplitude multiplicator for in4"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Mixed input signals"/>
+  </output>
+  <opcode>/* Mixer for four audio signals */
+opcode Mixer4, a, akakakak
+  ain1, kgain1, ain2, kgain2, ain3, kgain3, ain4, kgain4 xin
+  aout = ain1*kgain1 + ain2*kgain2 + ain3*kgain3 + ain4*kgain4
+  xout aout
+endop
+  </opcode>
+</modul>

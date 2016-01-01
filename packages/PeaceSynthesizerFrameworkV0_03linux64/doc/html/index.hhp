@@ -1,0 +1,105 @@
+[OPTIONS]
+Compiled file=cod.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=Peace Synthesizer Framework
+
+[WINDOWS]
+main="Peace Synthesizer Framework","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+tu_001a_makesound_8py-example.html
+tu_002a_sound_generation_8py-example.html
+tu_003a_Signal_viewer_basic_8py-example.html
+tu_003a_Signal_viewer_basic_easy_8py-example.html
+tu_004a_Realtime_Signal_viewer_8py-example.html
+tu_004b_Realtime_Signal_viewer_customization_8py-example.html
+tu_005a_NES_Famicom_sound_emulation_8py-example.html
+History.html
+Download.html
+namespacegl.html
+classnes_1_1nes.html
+classnes_1_1nes-members.html
+namespacepeaceaudio.html
+classpeaceaudio_1_1wavetype.html
+classpeaceaudio_1_1wavetype-members.html
+namespacepeaceaudiolib.html
+classpeaceaudiolib_1_1peaceStandardTrack.html
+classpeaceaudiolib_1_1peaceStandardTrack-members.html
+classpeaceaudiolib_1_1peaceaudioMixer.html
+classpeaceaudiolib_1_1peaceaudioMixer-members.html
+classpeaceaudiolib_1_1peaceaudio.html
+classpeaceaudiolib_1_1peaceaudio-members.html
+classpeaceaudiolib_1_1peaceNESTrack.html
+classpeaceaudiolib_1_1peaceNESTrack-members.html
+classpeaceaudiolib_1_1NESStringCompiler.html
+classpeaceaudiolib_1_1NESStringCompiler-members.html
+namespacepeaceaudiolib__base.html
+classpeaceaudiolib__base_1_1peaceaudioTrack.html
+classpeaceaudiolib__base_1_1peaceaudioTrack-members.html
+namespacepeacevisual.html
+classpeacevisual_1_1GLThread.html
+classpeacevisual_1_1GLThread-members.html
+classpeacevisual_1_1GLThread2.html
+namespacepostEffect.html
+classpostEffect_1_1Effect.html
+classpostEffect_1_1Effect-members.html
+classpostEffect_1_1EffectPlug.html
+classpostEffect_1_1EffectPlug-members.html
+dir_cfafba98a580ce4b62f8a6fa96d7cbb0.html
+dir_1b0ad7ed6c5f18d63472589be689e9c4.html
+dir_f234d659869e075498a6d11b1e070880.html
+dir_d655bd54f34197e99bf203852c03021b.html
+dir_23ec12649285f9fabf3a6b7380226c28.html
+index.html
+pages.html
+namespaces.html
+namespacemembers.html
+namespacemembers_func.html
+annotated.html
+classes.html
+hierarchy.html
+functions.html
+functions_func.html
+functions_vars.html
+examples.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+sync_on.png
+sync_off.png
+ftv2blank.png
+ftv2doc.png
+ftv2folderclosed.png
+ftv2folderopen.png
+ftv2ns.png
+ftv2mo.png
+ftv2cl.png
+ftv2lastnode.png
+ftv2link.png
+ftv2mlastnode.png
+ftv2mnode.png
+ftv2node.png
+ftv2plastnode.png
+ftv2pnode.png
+ftv2vertline.png
+ftv2splitbar.png
+classpeaceaudiolib_1_1peaceStandardTrack.png
+classpeaceaudiolib_1_1peaceNESTrack.png
+classpeacevisual_1_1GLThread.png
+classpeacevisual_1_1GLThread2.png
+classpostEffect_1_1Effect.png
+classpostEffect_1_1EffectPlug.png

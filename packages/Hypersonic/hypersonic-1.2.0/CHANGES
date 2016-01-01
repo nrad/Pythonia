@@ -1,0 +1,8 @@
+
+v1.1.0 (28/07/03)
+======
+
++ added checks for OSS soundcard; new variable to set in ~/.hypersonicrc
++ added new Task classes : File, Dsp that take a mode argument
++ added checks for SDL, enabling the Trace task
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Print" description="Prints control value to standard output">
+  <input>
+    <vardef name="value" csType="k" description="Value to print"/>
+  </input>
+  <opcode>/* Prints control value to standard out */
+opcode Print, 0, k
+  kvalue xin
+  printk2 kvalue, 1
+endop
+  </opcode>
+</modul>

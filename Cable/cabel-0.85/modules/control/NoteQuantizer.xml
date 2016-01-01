@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="NoteQuantizer" description="Quantize the incoming midi note numbers to selected pitches">
+  <input>
+    <vardef name="in" csType="k" description="Input signal"/>
+    <vardef name="c" csType="k" value="1" min="0" max="1" digits="0" description="Select c"/>
+    <vardef name="cis" csType="k" value="1" min="0" max="1" digits="0" description="Select cis"/>
+    <vardef name="d" csType="k" value="1" min="0" max="1" digits="0" description="Select d"/>
+    <vardef name="dis" csType="k" value="1" min="0" max="1" digits="0" description="Select dis"/>
+    <vardef name="e" csType="k" value="1" min="0" max="1" digits="0" description="Select e"/>
+    <vardef name="f" csType="k" value="1" min="0" max="1" digits="0" description="Select f"/>
+    <vardef name="fis" csType="k" value="1" min="0" max="1" digits="0" description="Select fis"/>
+    <vardef name="g" csType="k" value="1" min="0" max="1" digits="0" description="Select g"/>
+    <vardef name="gis" csType="k" value="1" min="0" max="1" digits="0" description="Select gis"/>
+    <vardef name="a" csType="k" value="1" min="0" max="1" digits="0" description="Select a"/>
+    <vardef name="ais" csType="k" value="1" min="0" max="1" digits="0" description="Select ais"/>
+    <vardef name="b" csType="k" value="1" min="0" max="1" digits="0" description="Select b"/>
+  </input>
+  <output>
+    <vardef name="out" csType="k" description="Quantized input signal"/>
+  </output>
+  <opcode>/* Quantize  the incoming midi note numbers to selected pitches */
+opcode NoteQuantizer, k, kkkkkkkkkkkkk
+  kin, kc, kcis, kd, kdis, ke, kf, kfis, kg, kgis, ka, kais, kb xin
+
+  kin     limit    kin, 0, 127
+  kin     =        int(kin)
+
+  kc      limit    kc, 0, 1
+  kc      =        int(kc)
+  kcis    limit    kcis, 0, 1
+  kcis    =        int(kcis)
+  kd      limit    kd, 0, 1
+  kd      =        int(kd)
+  kdis    limit    kdis, 0, 1
+  kdis    =        int(kdis)
+  ke      limit    ke, 0, 1
+  ke      =        int(ke)
+  kf      limit    kf, 0, 1
+  kf      =        int(kf)
+  kfis    limit    kfis, 0, 1
+  kfis    =        int(kfis)
+  kg      limit    kg, 0, 1
+  kg      =        int(kg)
+  kgis    limit    kgis, 0, 1
+  kgis    =        int(kgis)
+  ka      limit    ka, 0, 1
+  ka      =        int(ka)
+  kais    limit    kais, 0, 1
+  kais    =        int(kais)
+  kb      limit    kb, 0, 1
+  kb      =        int(kb)
+
+  kout    init     0
+  
+  knote   =        kin%12
+  kset    =        0
+
+  kskip   = kc+kcis+kd+kdis+ke+kf+kfis+kg+kgis+ka+kais+kb
+  if (kskip == 0) goto skip
+
+restart:
+  if (knote == 0 &amp;&amp; kc == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 1 &amp;&amp; kcis == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 2 &amp;&amp; kd == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 3 &amp;&amp; kdis == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 4 &amp;&amp; ke == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 5 &amp;&amp; kf == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 6 &amp;&amp; kfis == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 7 &amp;&amp; kg == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 8 &amp;&amp; kgis == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 9 &amp;&amp; ka == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 10 &amp;&amp; kais == 1) then
+    kout = kin
+    kset = 1
+  elseif (knote == 11 &amp;&amp; kb == 1) then
+    kout = kin
+    kset = 1
+  endif
+  
+  kin = kin + 1
+  knote = kin%12
+  if (kset == 0) goto restart
+
+skip:
+  xout kout
+endop
+  </opcode>
+</modul>

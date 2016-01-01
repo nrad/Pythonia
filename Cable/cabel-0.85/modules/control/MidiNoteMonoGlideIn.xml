@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="MidiNoteMonoGlideIn" description="Midi note input for monosynth with portamento">
+  <input>
+    <vardef name="velscale" csType="i" value="15000" min="0" max="32000" description="Scaling of MIDI velocity"/>
+    <vardef name="minafttch" csType="i" value="0" description="Minimal value for scaled channel aftertouch"/>
+    <vardef name="maxafttch" csType="i" value="127" description="Maximal value for scaled channel aftertouch"/>
+    <vardef name="portatime" csType="i" value="0.05" min="0.001" max="100" description="Portamento time in seconds"/>
+  </input>
+  <output>
+    <vardef name="frq" csType="k" description="Frequency of MIDI note with pitch bend information"/>
+    <vardef name="note" csType="k" description="MIDI note number of last pressed key"/>
+    <vardef name="vel" csType="i" description="Velocity of MIDI note"/>
+    <vardef name="afttch" csType="k" description="Scaled channel aftertouch"/>
+  </output>
+  <global>
+    <def description="Number of instruments">gkcntmidinotemonoglidein init 0</def>
+    <def description="Old pitch of instruments">giptchmidinotemonoglidein init 200</def>
+  </global>
+  <opcode>/* Midi note input for monosynth with portamento */
+opcode MidiNoteMonoGlideIn, kkik, iiii
+
+  icnt                =    i(gkcntmidinotemonoglidein)+1
+  gkcntmidinotemonoglidein init icnt
+
+  /* Turn instrument off if there's a new instance */
+  if (icnt &lt; gkcntmidinotemonoglidein) then
+    turnoff     
+  endif
+
+  ivelscale, iminafttch, imaxafttch, iportatime xin
+
+  knote init 0
+  kvel init 0
+  kafttch init 0
+  kptchbnd init 0
+
+  midinoteonkey knote, kvel
+  midichannelaftertouch kafttch, iminafttch, imaxafttch
+  midipitchbend kptchbnd
+  ifrq cpsmidi
+  ivel ampmidi  ivelscale
+
+  /* Add portamento to frequency */
+  kglide expseg giptchmidinotemonoglidein, iportatime, ifrq, 1, ifrq
+  giptchmidinotemonoglidein = ifrq
+  kfrq = kglide
+
+  /* Add pitchbend (-1 octave to +1 octave) */
+  kfrq = kfrq * 2^kptchbnd
+
+  xout kfrq, knote, ivel, kafttch
+endop
+  </opcode>
+</modul>

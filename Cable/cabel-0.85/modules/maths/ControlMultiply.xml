@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="ControlMultiply" description="Multiply two control signals">
+  <input>
+    <vardef name="in1" csType="k" value="1" description="First control signal"/>
+    <vardef name="in2" csType="k" value="1" description="Second control signal"/>
+  </input>
+  <output>
+    <vardef name="pro" csType="k" description="Product of input signals"/>
+  </output>
+  <opcode>/* Multiply two control signals */
+opcode ControlMultiply, k, kk
+  kin1, kin2 xin
+  kpro = kin1 * kin2
+  xout kpro
+endop
+  </opcode>
+</modul>

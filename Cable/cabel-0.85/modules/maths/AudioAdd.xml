@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="AudioAdd" description="Add two audio signals">
+  <input>
+    <vardef name="in1" csType="a" description="First audio signal"/>
+    <vardef name="in2" csType="a" description="Second audio signal"/>
+  </input>
+  <output>
+    <vardef name="sum" csType="a" description="Sum of input signals"/>
+  </output>
+  <opcode>/* Add two audio signals */
+opcode AudioAdd, a, aa
+  ain1, ain2 xin
+  asum = ain1 + ain2
+  xout asum
+endop
+  </opcode>
+</modul>

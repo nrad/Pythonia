@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="BitCrusher" description="Bit depth / sample rate reducer">
+  <input>
+    <vardef name="in" csType="a" description="Audio input"/>
+    <vardef name="bits" csType="i" value="16" min="1" max="16" digits="0" description="Bit depth"/>
+    <vardef name="rate" csType="i" value="44100" min="1" max="48000" digits="0" description="Sample rate"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="LoFi inferno"/>
+  </output>
+  <opcode>/* Bit depth / sample rate reducer */
+opcode BitCrusher, a, aii
+  ain, ibits, irate  xin
+
+  ibits    limit    ibits, 1, 16
+  ibits    =        int(ibits)
+  irate    limit    irate, 1, 48000
+  irate    =        int(irate)
+  
+  ibits    =        2^ibits
+  ifold    =        sr/irate
+  
+  kin      downsamp ain
+  kin      =        kin+32768
+  kin      =        kin*(ibits/65536)
+  kin      =        int(kin)
+  aout     upsamp   kin
+  aout     =        aout*(65536/ibits)-32768
+  aout     fold     aout, ifold
+  
+  xout aout
+endop
+  </opcode>
+</modul>

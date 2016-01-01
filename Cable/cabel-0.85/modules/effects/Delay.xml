@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Delay" description="Delay an input signal">
+  <input>
+    <vardef name="in" csType="a" description="Audio input"/>
+    <vardef name="time" csType="i" value="0.001" min="0.001" max="10" description="Delay time in seconds"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Delayed input signal"/>
+  </output>
+  <opcode>/* Delay an input signal */
+opcode Delay, a, ai
+  ain, itime  xin
+
+  itime  limit  itime, 0, 10
+  aout   delay  ain, itime
+
+  ; stay triggerd until delay is nearly finished
+  kfade  linsegr 0, 0.01, 0, itime, 0
+  
+  xout aout
+endop
+  </opcode>
+</modul>

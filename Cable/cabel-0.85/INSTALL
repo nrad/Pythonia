@@ -1,0 +1,219 @@
+===================================
+Installation instructions for Cabel
+===================================
+
+To use Cabel you have to install Cabel's dependencies:
+
+For Linux User
+- Python (http://www.python.org or your distro's python package)
+  -> >= 2.4 recommended for better csound process handling
+- wxPython (> 2.5.0) (http://www.wxpython.org or your distro's equivalent)
+- csound5 (http://www.csounds.com)
+  -> get latest RPMs or sourcecode from http://csound.sourceforge.net
+
+For Windows User
+- Python (http://www.python.org)
+  -> 2.4.x recommended
+- Python for Windows Extensions (http://sourceforge.net/projects/pywin32/)
+  -> version must fit to your python version
+- wxPython (http://www.wxpython.org)
+  -> greater than 2.5.0 for your python version
+- csound5 (http://www.csounds.com)
+  -> get the latest windows installer from http://sourceforge.net/projects/csound
+
+For some help on this install issues see below.
+
+
+Getting started
+===============
+
+Start Cabel with "python cabel.py" in the Cabel directory.
+
+Go to the menu: Options->Preferences. Set your preferred sample rate,
+control rate, ksmps (that's sample rate/control rate) and number of
+output channels (e.g. 1 for mono output, 2 for stereo output and so on).
+
+I use the following:
+Sample Rate: 48000
+Control Rate: 6000
+KSMPS: 8
+Channels: 1
+
+More information about those variables at
+http://www.csounds.com/manual/html/sr.html
+http://www.csounds.com/manual/html/kr.html
+http://www.csounds.com/manual/html/ksmps.html
+http://www.csounds.com/manual/html/nchnls.html
+
+To use Cabel with a default MIDI activated instrument set the score to
+"f0 6000" which means "play csound for 6000 seconds". If you use an
+instrument which only needs to be triggerd once set the score to "i1 0
+6000" which means start instrument 1 at start time 0 and let i play for
+ 6000 seconds.
+
+Set the path to your csound executable and your preferred csound
+parameters (http://www.csounds.com/manual/html/CommandFlags.html).
+
+I use the following csound parameters:
+
+On Linux platforms:
+------------------
+,----
+| -d -W -o dac:plughw:0 -+rtaudio=alsa -b256 -B2048 -M0 -m0
+`----
+for alsa realtime output (-o dac:plughw:0 means connect the digital-analog
+converter to the alsa device plughw:0) and
+
+,----
+| -d -W -o dac -+rtaudio=jack -+jack_client=cabel -b256 -B2048 -M0 -m0
+`----
+for jack realtime output (both connected with -M0 to the first PortMIDI
+device). Add a "-i adc" for realtime audio input.
+
+On Windows:
+----------
+,----
+| -d -b128 -B1800 -W -rtmidi=mme -M0 -+rtaudio=mme -o dac1
+`----
+for realtime output through the native MME implementation.
+
+
+
+Some help for Csound5 installation and usage
+============================================
+
+Csound5 is still a beta release so here's a short instruction howto
+get, compile (Linux only) and install it.
+
+------------------
+On Linux platforms:
+------------------
+
+This is nearly smurky's linux mini howto
+in the csound5 forum at http://csounds.com/phpBB2/viewtopic.php?t=115
+
+
+1. Get the dependencies. They're listed here:
+
+   http://www.csounds.com/manual/html/ch07s02s06.html
+
+   Also install python-dev for the csound python interface,
+   libfluidsynth-dev or your distro's version of the fluidsynth headers.
+
+2. Get the sources from http://csound.sourceforge.net or checkout the current CVS
+
+   ,----
+   | cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/csound co -P csound5
+   `----
+
+3. Follow the instructions in the manual to build and install
+   csound5. They can be found here:
+
+   http://www.csounds.com/manual/html/ch07s02s07.html
+
+   Now execute:
+
+   ,----
+   | scons usePortAudio=0
+   `----
+
+   when that's done execute:
+
+   ,----
+   | scons usePortAudio=0 install
+   `----
+
+   At the moment (CVS from 2005-11-08) you have to make some changes manually
+   (the example presumes you installed csound5 to /usr/local):
+
+   ,----
+   | ln -s /usr/local/lib/_csnd.so /usr/local/lib/lib_csnd.so
+   `----
+
+   And copy the "csnd.py" python interface file from your csound5 build
+   directory to /usr/local/lib.
+
+4. You now need to make sure that csound can find the plugin
+   opcodes. If you installed csound in /usr/local, the opcodes will be
+   in /usr/local/lib/csound/opcodes. Add the following line to
+   /etc/bash.bashrc or whatever the equivalent is on your system:
+
+   ,----
+   | export OPCODEDIR=/usr/local/lib/csound/opcodes
+   `----
+
+   put the same line in /etc/profile. Open up a terminal and execute:
+
+   ,----
+   |  . /etc/profile
+   `----
+
+   You should now be able to run csound from the command line. The
+   midi options need to be specified in proper ALSA speak, ie hw:N,N.
+   The command line that I'm using most at the moment is:
+
+   ,----
+   | csound -+rtaudio=jack -+rtmidi=alsa -o dac -Mhw:1,0 -d -m0
+   `----
+
+   hw:1,0 specifies the first virmidi port on my system. Use "amidi -l"
+   to get a list of the raw alsa midi devices.
+
+   If you compiled with PortMIDI use a very high and senseless MIDI device
+   number to get a list of midi device numbers.
+
+5. Test your csound5 installation with python interface via
+   interfaces/test.py in your csound5 build directory.
+   
+
+-------
+Windows:
+-------
+
+1. Get the actual Windows Installer for CSound5 from
+   http://sourceforge.net/projects/csound.
+   The relevant download file should be a .exe file.
+   Download it and install csound to your pc. 
+
+2. For Python beeing able to load the csound python api,
+   add C:\csound5\bin to your PYTHONPATH environment variable. 
+
+   To do this, 
+
+   - right-click on the "My Computer" (Arbeitsplatz) icon
+     on the desktop and open the Properties dialog. 
+   - Under Advanced you can set your environment variables. 
+   - Remarks:
+       If you installed csound5 to another location than
+       C:\csound5 on your pc set the path accordingly. 
+
+Now you should be able to run csound from the command line.
+The command line i'm using most at the moment is:
+
+,----
+| csound -d -b128 -B1536 -W -+rtmidi=mme -M0 -+rtaudio=mme -o dac1
+`----
+
+
+Real time audio and MIDI under Windows
+--------------------------------------
+
+The midi and real time audio configuration of your system may be different.
+In order to get lists of available midi and/or audio output devices specify
+them with an very high and sensless device number.
+
+By default, real time audio uses PortAudio with the portaudio.dll.0.0.19 file
+from Victor Lazzarini's Csound 5 MSVC package. This module includes support for
+MME, DirectSound, and ASIO; the available devices can be listed by using
+"-i adc or -o dac" with an out of range device number (e.g. -o dac100). In most
+cases, MME devices are listed first, followed by DirectSound, and ASIO devices
+are listed last; thus, the default device is usually MME. As the default
+PortAudio DLL is somewhat old, if there are problems with real time audio, you
+may try using the DirectSound-only DLL file from csound5\pa_dx (replace the file
+in bin\ with it), or the native MME plugin which is enabled by the -+rtaudio=mme
+command line option.
+
+Real time MIDI can use PortMidi (the default), or MME (if -+rtmidi=mme is specified
+on the command line). In both cases, MIDI input is enabled by -M devnum, and MIDI
+output is -Q devnum; 'devnum' is a device number, which, if out of range, will
+result in an error and listing of available devices.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Midi2Frq" description="Convert MIDI note number into frequency">
+  <input>
+    <vardef name="in" csType="k" min="0" max="127" description="MIDI note number"/>
+  </input>
+  <output>
+    <vardef name="out" csType="k" description="Corresponding frequency"/>
+  </output>
+  <opcode>/* Convert MIDI note number into frequency */
+opcode Midi2Frq, k, k
+  kin xin
+  kin limit kin, 0 ,127
+  kin =     int(kin)
+
+  kout = 440.0/32 * 2^((kin - 9)/12.0)
+
+  xout kout
+endop
+  </opcode>
+</modul>

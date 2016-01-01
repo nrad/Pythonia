@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="MidiNoteIn" description="Midi input of frequency, note number, velocity and channel aftertouch">
+  <input>
+    <vardef name="velscale" csType="i" value="15000" min="0" max="32000" description="Scaling of MIDI velocity"/>
+    <vardef name="minafttch" csType="i" value="0" description="Minimal value for scaled channel aftertouch"/>
+    <vardef name="maxafttch" csType="i" value="127" description="Maximal value for scaled channel aftertouch"/>
+  </input>
+  <output>
+    <vardef name="frq" csType="k" description="Frequency of MIDI note with pitch bend information"/>
+    <vardef name="note" csType="k" description="MIDI note number of last pressed key"/>
+    <vardef name="vel" csType="i" description="Velocity of MIDI note"/>
+    <vardef name="afttch" csType="k" description="Scaled channel aftertouch"/>
+  </output>
+  <opcode>/* Midi keyboard input of note number and velocity */
+opcode MidiNoteIn, kkik, iii
+  ivelscale, iminafttch, imaxafttch xin
+
+  knote init 0
+  kvel init 0
+  kafttch init 0
+
+  midinoteonkey knote, kvel
+  midichannelaftertouch kafttch, iminafttch, imaxafttch
+  kfrq cpsmidib
+  ivel ampmidi  ivelscale
+
+  xout kfrq, knote, ivel, kafttch
+endop
+  </opcode>
+</modul>

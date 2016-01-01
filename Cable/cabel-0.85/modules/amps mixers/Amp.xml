@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Amp" description="Amplify audio signal">
+  <input>
+    <vardef name="in" csType="a" description="Audio signal"/>
+    <vardef name="gain" csType="k" description="Gain"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Amplified audio signal"/>
+  </output>
+  <opcode>/* Amplify audio signal */
+opcode Amp, a, ak
+  ain, kgain xin
+  aout = ain * kgain
+  xout aout
+endop
+  </opcode>
+</modul>

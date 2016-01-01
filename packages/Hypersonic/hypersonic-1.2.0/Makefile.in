@@ -1,0 +1,80 @@
+srcdir=@srcdir@
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+mandir=@mandir@
+INSTALL=@INSTALL@
+
+CC=@CC@
+ISDL=@ISDL@
+IPYTHON=@IPYTHON@
+PYTHONSITE=@PYTHONSITE@
+CFLAGS=@CFLAGS@ -I. -I$(IPYTHON)
+
+LINKER=@LINKER@
+LFLAGS=@LFLAGS@
+
+SNDFILE_CFLAGS = @SNDFILE_CFLAGS@
+SNDFILE_LIBS = @SNDFILE_LIBS@
+
+OBJS=filter.o osc.o pipe.o task.o buffer.o memory.o list.o debug.o array.o term.o sdl.o sonic_wrap.o @PAOBJS@
+HEADERS =
+
+SDLLIB=@SDLLIB@
+
+SO_LIBS=@SO_LIBS@
+
+all: test
+
+test: sonicmodule.so
+	./Sonic.py > /dev/null
+
+#docs:
+
+sonicmodule.so: $(OBJS) $(HEADERS)
+	$(LINKER) $(LFLAGS) -o $@ $(OBJS) $(SO_LIBS) $(SDLLIB)
+
+sonic_wrap.o : sonic_wrap.c
+	$(CC) -O3 -Wall -c sonic_wrap.c $(CFLAGS)
+
+install : sonicmodule.so
+	$(INSTALL) sonicmodule.so $(PYTHONSITE)
+	$(INSTALL) Sonic.py $(PYTHONSITE)
+	$(INSTALL) Play.py Rec.py Gen.py /usr/local/bin
+
+uninstall :
+	rm -f $(PYTHONSITE)/sonicmodule.so
+	rm -f $(PYTHONSITE)/Sonic.py 
+	rm -f $(PYTHONSITE)/Sonic.pyc 
+	rm -f /usr/local/bin/Play.py /usr/local/bin/Rec.py /usr/local/bin/Gen.py 
+	rm -f /usr/local/bin/Play.pyc /usr/local/bin/Rec.pyc /usr/local/bin/Gen.pyc
+
+devel : sonic.i 
+	dont run me
+	swig -python -module sonic sonic.i
+devel-clean :
+	rm -f sonic_* sonic.i pregen.*
+
+TASKFILES= task.h osc.h filter.h buffer.h term.h array.h sdl.h
+sonic.i : memory.h pipe.h $(TASKFILES) swig.py
+	./swig.py memory.h pipe.h $(TASKFILES) > sonic.i
+
+clean : debug.h
+	rm -f *.pyc *.pyo *.o sonic.i sonicmodule.so TRACE main *.tar.gz
+	rm -f logfile errlog
+
+VERSION=@PACKAGE_VERSION@
+NAME=@PACKAGE_NAME@
+dist :
+	rm -rf $(NAME)-$(VERSION)
+	mkdir $(NAME)-$(VERSION)
+	cp install-sh configure.in config.sub config.h.in config.guess configure COPYING README TODO CHANGES *.c *.h Makefile.* *.raw *.py *.html $(NAME)-$(VERSION)
+	tar zcf $(NAME)-$(VERSION).tar.gz $(NAME)-$(VERSION)
+	#tar jcf $(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
+	cp $(NAME)-$(VERSION).tar.* *.html web
+	cp $(NAME)-$(VERSION).tar.* ~/.
+
+doc :
+	pydoc.py -k Sonic
+
+

@@ -1,0 +1,1662 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Sonic</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Sonic</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br></font></td></tr></table>
+    <p></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Array">Array</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#MMap">MMap</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#ShortArray">ShortArray</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Wavetable">Wavetable</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#SubArray">SubArray</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Buffer">Buffer</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Pipe">Pipe</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Tap">Tap</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Task">Task</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Abs">Abs</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Add">Add</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Copy">Copy</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Delay">Delay</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Env">Env</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#File">File</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#FileRd">FileRd</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#FileWr">FileWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Fir">Fir</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Gain">Gain</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#GetChar">GetChar</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#GetInt">GetInt</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Hi">Hi</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#IIR">IIR</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Interleave">Interleave</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Linear">Linear</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Lo">Lo</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Lookup">Lookup</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Loop">Loop</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Mean">Mean</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#MemTask">MemTask</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#MemRd">MemRd</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#MemWr">MemWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Mix">Mix</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Mix2">Mix2</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Mix4">Mix4</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Mix8">Mix8</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Noise">Noise</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#None_">None_</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Null">Null</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#OSS">OSS</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Dsp">Dsp</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#OSSRd">OSSRd</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRd">DspRd</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSRd">OSSRd</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRd">DspRd</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSRdWr">OSSRdWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRdWr">DspRdWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSRdWr">OSSRdWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRdWr">DspRdWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSWr">OSSWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspWr">DspWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSWr">OSSWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspWr">DspWr</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSS">OSS</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#Dsp">Dsp</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#OSSRd">OSSRd</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRd">DspRd</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSRd">OSSRd</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRd">DspRd</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSRdWr">OSSRdWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRdWr">DspRdWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSRdWr">OSSRdWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspRdWr">DspRdWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSWr">OSSWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspWr">DspWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#OSSWr">OSSWr</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#DspWr">DspWr</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#PA">PA</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Sonic.html#PARd">PARd</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#PARdWr">PARdWr</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#PAWr">PAWr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Sonic.html#RLo1">RLo1</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#RLo2">RLo2</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#RMS">RMS</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#RMod">RMod</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Resample">Resample</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Sin">Sin</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Split">Split</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Squ">Squ</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Term">Term</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Trace">Trace</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Tri">Tri</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Sonic.html#Zero">Zero</a>
+</font></dt></dl>
+</dd>
+</dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Buffer">class <strong>Buffer</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Buffer">Buffer</a>(size):&nbsp;just&nbsp;some&nbsp;memory<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Buffer-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+
+<dl><dt><a name="Buffer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-append"><strong>append</strong></a>(self, p)</dt></dl>
+
+<dl><dt><a name="Buffer-fill"><strong>fill</strong></a>(self, task)</dt></dl>
+
+<dl><dt><a name="Buffer-free"><strong>free</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-pipe"><strong>pipe</strong></a>(self, task)</dt></dl>
+
+<dl><dt><a name="Buffer-pull"><strong>pull</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-pull_free"><strong>pull_free</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-pull_reset"><strong>pull_reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-pull_str"><strong>pull_str</strong></a>(self, depth)</dt></dl>
+
+<dl><dt><a name="Buffer-pull_visit"><strong>pull_visit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-push"><strong>push</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-remove"><strong>remove</strong></a>(self, p)</dt></dl>
+
+<dl><dt><a name="Buffer-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-send"><strong>send</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-sources"><strong>sources</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Buffer-targets"><strong>targets</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Buffer(size): just some memory '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Pipe">class <strong>Pipe</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Pipe">Pipe</a>(x,y):&nbsp;connects&nbsp;a&nbsp;<a href="#Task">Task</a>&nbsp;to&nbsp;a&nbsp;<a href="#Buffer">Buffer</a>&nbsp;(or&nbsp;vice-versa)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Pipe-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+
+<dl><dt><a name="Pipe-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-consume"><strong>consume</strong></a>(self, i)</dt></dl>
+
+<dl><dt><a name="Pipe-done"><strong>done</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-free"><strong>free</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-get_i"><strong>get_i</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-get_limit"><strong>get_limit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-get_rlimit"><strong>get_rlimit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-info"><strong>info</strong></a>(self, depth)</dt></dl>
+
+<dl><dt><a name="Pipe-limit"><strong>limit</strong></a>(self, i)</dt></dl>
+
+<dl><dt><a name="Pipe-no_limit"><strong>no_limit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-produce"><strong>produce</strong></a>(self, i)</dt></dl>
+
+<dl><dt><a name="Pipe-pull"><strong>pull</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-pull_free"><strong>pull_free</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-pull_reset"><strong>pull_reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-pull_str"><strong>pull_str</strong></a>(self, depth<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="Pipe-pull_visit"><strong>pull_visit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-push"><strong>push</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-read_short"><strong>read_short</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-read_size"><strong>read_size</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-reader_mem"><strong>reader_mem</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-reader_request"><strong>reader_request</strong></a>(self, size)</dt></dl>
+
+<dl><dt><a name="Pipe-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-rlimit"><strong>rlimit</strong></a>(self, i)</dt></dl>
+
+<dl><dt><a name="Pipe-source"><strong>source</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-sources"><strong>sources</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-target"><strong>target</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-targets"><strong>targets</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-write_short"><strong>write_short</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Pipe-write_size"><strong>write_size</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-writer_mem"><strong>writer_mem</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Pipe-writer_request"><strong>writer_request</strong></a>(self, size)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Pipe(x,y): connects a Task to a Buffer (or vice-versa) '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Task">class <strong>Task</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Task">Task</a>&nbsp;objects&nbsp;process&nbsp;signals&nbsp;<br>
+obtained&nbsp;from&nbsp;<a href="#Buffer">Buffer</a>&nbsp;objects&nbsp;(memory)&nbsp;<br>
+via&nbsp;<a href="#Pipe">Pipe</a>&nbsp;objects&nbsp;(smart&nbsp;pointers).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Task-__call__"><strong>__call__</strong></a>(self, *args)</dt></dl>
+
+<dl><dt><a name="Task-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+
+<dl><dt><a name="Task-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-__ror__"><strong>__ror__</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Task-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-_print"><strong>_print</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-_reader_notify"><strong>_reader_notify</strong></a>(self, rp)</dt></dl>
+
+<dl><dt><a name="Task-_send"><strong>_send</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-_writer_notify"><strong>_writer_notify</strong></a>(self, wp)</dt></dl>
+
+<dl><dt><a name="Task-close_reader"><strong>close_reader</strong></a>(self, p)</dt></dl>
+
+<dl><dt><a name="Task-close_writer"><strong>close_writer</strong></a>(self, p)</dt></dl>
+
+<dl><dt><a name="Task-done"><strong>done</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-free"><strong>free</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-open_reader"><strong>open_reader</strong></a>(self, buffer)</dt></dl>
+
+<dl><dt><a name="Task-open_writer"><strong>open_writer</strong></a>(self, buffer)</dt></dl>
+
+<dl><dt><a name="Task-pipe"><strong>pipe</strong></a>(self, buf)</dt></dl>
+
+<dl><dt><a name="Task-pull"><strong>pull</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-pull_free"><strong>pull_free</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-pull_reset"><strong>pull_reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-pull_str"><strong>pull_str</strong></a>(self, depth<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="Task-pull_visit"><strong>pull_visit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-pullpush"><strong>pullpush</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-push"><strong>push</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-reader"><strong>reader</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-rotate_pull"><strong>rotate_pull</strong></a>(self)</dt><dd><tt>&nbsp;when&nbsp;the&nbsp;path&nbsp;has&nbsp;loops</tt></dd></dl>
+
+<dl><dt><a name="Task-send"><strong>send</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-source"><strong>source</strong></a>(self, *place)</dt></dl>
+
+<dl><dt><a name="Task-sources"><strong>sources</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-target"><strong>target</strong></a>(self, *place)</dt></dl>
+
+<dl><dt><a name="Task-targets"><strong>targets</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Task-writer"><strong>writer</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Task objects process signals <font color="#c040c0">\n</font>    obtained from... (memory) <font color="#c040c0">\n</font>    via Pipe objects (smart pointers).'</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="None_">class <strong>None_</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#None_">None_</a>:&nbsp;do&nbsp;nothing<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' None_: do nothing '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Null">class <strong>Null</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Null">Null</a>():&nbsp;trash&nbsp;all&nbsp;input<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Null(): trash all input '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Zero">class <strong>Zero</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;write&nbsp;zero<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' write zero '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Copy">class <strong>Copy</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;copy&nbsp;input&nbsp;to&nbsp;output<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' copy input to output '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Add">class <strong>Add</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Add">Add</a>:&nbsp;output&nbsp;sum&nbsp;of&nbsp;all&nbsp;inputs<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Add: output sum of all inputs '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Abs">class <strong>Abs</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;output&nbsp;absolute&nbsp;value&nbsp;of&nbsp;input<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' output absolute value of input '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RMod">class <strong>RMod</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;output&nbsp;product&nbsp;of&nbsp;inputs<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' output product of inputs '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Mean">class <strong>Mean</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;output&nbsp;average&nbsp;of&nbsp;inputs<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' output average of inputs '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Mix">class <strong>Mix</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Mix">Mix</a>(r=1.0):&nbsp;mix&nbsp;with&nbsp;gain=r<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Mix(r=1.0): mix with gain=r '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Mix2">class <strong>Mix2</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Mix4">class <strong>Mix4</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Mix8">class <strong>Mix8</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Fir">class <strong>Fir</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Fir">Fir</a>(list_of_rs):&nbsp;generic&nbsp;finite&nbsp;impulse&nbsp;filter<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Fir(list_of_rs): generic finite impulse filter '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Resample">class <strong>Resample</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Resample">Resample</a>(r):&nbsp;resample&nbsp;at&nbsp;rate&nbsp;r<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Resample-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Resample(r): resample at rate r '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Split">class <strong>Split</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;output&nbsp;left&nbsp;and&nbsp;right&nbsp;from&nbsp;stereo&nbsp;(interleaved)&nbsp;input<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' output left and right from stereo (interleaved) input '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Interleave">class <strong>Interleave</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;output&nbsp;stereo&nbsp;(interleaved)&nbsp;from&nbsp;left&nbsp;and&nbsp;right&nbsp;inputs<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' output stereo (interleaved) from left and right inputs '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Gain">class <strong>Gain</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Gain">Gain</a>(r=1.0):&nbsp;ouptput&nbsp;input&nbsp;multiplied&nbsp;by&nbsp;r<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Gain-get_r"><strong>get_r</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Gain-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Gain(r=1.0): ouptput input multiplied by r '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="File">class <strong>File</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#File">File</a>(filename,mode):&nbsp;read&nbsp;a&nbsp;file<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="File-seek"><strong>seek</strong></a>(self, offset)</dt></dl>
+
+<dl><dt><a name="File-size"><strong>size</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' File(filename,mode): read a file '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FileRd">class <strong>FileRd</strong></a>(<a href="Sonic.html#File">File</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#FileRd">FileRd</a>(filename):&nbsp;read&nbsp;a&nbsp;file<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#FileRd">FileRd</a></dd>
+<dd><a href="Sonic.html#File">File</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' FileRd(filename): read a file '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FileWr">class <strong>FileWr</strong></a>(<a href="Sonic.html#File">File</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#FileWr">FileWr</a>(filename):&nbsp;write&nbsp;a&nbsp;file<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#FileWr">FileWr</a></dd>
+<dd><a href="Sonic.html#File">File</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' FileWr(filename): write a file '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OSS">class <strong>OSS</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#OSS">OSS</a>(dev,speed,stereo,mode='w'):&nbsp;read/write&nbsp;<a href="#OSS">OSS</a>&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = " OSS(dev,speed,stereo,mode='w'): read/write OSS soundcard "</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OSSRdWr">class <strong>OSSRdWr</strong></a>(<a href="Sonic.html#OSS">OSS</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#OSSRdWr">OSSRdWr</a>(dev,speed,stereo):&nbsp;read/write&nbsp;<a href="#OSS">OSS</a>&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#OSSRdWr">OSSRdWr</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' OSSRdWr(dev,speed,stereo): read/write OSS soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OSSRd">class <strong>OSSRd</strong></a>(<a href="Sonic.html#OSS">OSS</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#OSSRd">OSSRd</a>(dev,speed,stereo):&nbsp;read&nbsp;<a href="#OSS">OSS</a>&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#OSSRd">OSSRd</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' OSSRd(dev,speed,stereo): read OSS soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OSSWr">class <strong>OSSWr</strong></a>(<a href="Sonic.html#OSS">OSS</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#OSSWr">OSSWr</a>(dev,speed,stereo):&nbsp;write&nbsp;<a href="#OSS">OSS</a>&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#OSSWr">OSSWr</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' OSSWr(dev,speed,stereo): write OSS soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PA">class <strong>PA</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#PA">PA</a>(dev,speed,stereo,mode):&nbsp;read/write&nbsp;portaudio&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' PA(dev,speed,stereo,mode): read/write portaudio soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PARdWr">class <strong>PARdWr</strong></a>(<a href="Sonic.html#PA">PA</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#PARdWr">PARdWr</a>(dev,speed,stereo):&nbsp;read/write&nbsp;portaudio&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#PARdWr">PARdWr</a></dd>
+<dd><a href="Sonic.html#PA">PA</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' PARdWr(dev,speed,stereo): read/write portaudio soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PARd">class <strong>PARd</strong></a>(<a href="Sonic.html#PA">PA</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#PARd">PARd</a>(dev,speed,stereo):&nbsp;read&nbsp;portaudio&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#PARd">PARd</a></dd>
+<dd><a href="Sonic.html#PA">PA</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' PARd(dev,speed,stereo): read portaudio soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PAWr">class <strong>PAWr</strong></a>(<a href="Sonic.html#PA">PA</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#PAWr">PAWr</a>(dev,speed,stereo):&nbsp;write&nbsp;portaudio&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#PAWr">PAWr</a></dd>
+<dd><a href="Sonic.html#PA">PA</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' PAWr(dev,speed,stereo): write portaudio soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Dsp">class <strong>Dsp</strong></a>(<a href="Sonic.html#OSS">OSS</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#DspRdWr">DspRdWr</a>(dev,speed,stereo):&nbsp;read/write&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#Dsp">Dsp</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' DspRdWr(dev,speed,stereo): read/write soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DspRdWr">class <strong>DspRdWr</strong></a>(<a href="Sonic.html#OSSRdWr">OSSRdWr</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#DspRdWr">DspRdWr</a>(dev,speed,stereo):&nbsp;read/write&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#DspRdWr">DspRdWr</a></dd>
+<dd><a href="Sonic.html#OSSRdWr">OSSRdWr</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' DspRdWr(dev,speed,stereo): read/write soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DspRd">class <strong>DspRd</strong></a>(<a href="Sonic.html#OSSRd">OSSRd</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#DspRd">DspRd</a>(dev,speed,stereo):&nbsp;read&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#DspRd">DspRd</a></dd>
+<dd><a href="Sonic.html#OSSRd">OSSRd</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' DspRd(dev,speed,stereo): read soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DspWr">class <strong>DspWr</strong></a>(<a href="Sonic.html#OSSWr">OSSWr</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#DspWr">DspWr</a>(dev,speed,stereo):&nbsp;write&nbsp;soundcard<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#DspWr">DspWr</a></dd>
+<dd><a href="Sonic.html#OSSWr">OSSWr</a></dd>
+<dd><a href="Sonic.html#OSS">OSS</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' DspWr(dev,speed,stereo): write soundcard '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sin">class <strong>Sin</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Sin">Sin</a>(f=440,r=1.0):&nbsp;generate&nbsp;a&nbsp;sin&nbsp;wave,&nbsp;freq=f,&nbsp;amplitude=r<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Sin-set_f"><strong>set_f</strong></a>(self, f)</dt></dl>
+
+<dl><dt><a name="Sin-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Sin(f=440,r=1.0): generate a sin wave, freq=f, amplitude=r '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Squ">class <strong>Squ</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Squ">Squ</a>(f=440,r=1.0):&nbsp;generate&nbsp;a&nbsp;square&nbsp;wave<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Squ-set_f"><strong>set_f</strong></a>(self, f)</dt></dl>
+
+<dl><dt><a name="Squ-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Squ(f=440,r=1.0): generate a square wave '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Tri">class <strong>Tri</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Tri">Tri</a>(f=440,r=1.0):&nbsp;generate&nbsp;a&nbsp;triangle&nbsp;wave<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Tri-set_f"><strong>set_f</strong></a>(self, f)</dt></dl>
+
+<dl><dt><a name="Tri-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Tri(f=440,r=1.0): generate a triangle wave '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Noise">class <strong>Noise</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Noise">Noise</a>():&nbsp;generate&nbsp;noise<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Noise(): generate noise '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Lo">class <strong>Lo</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Lo">Lo</a>(r):&nbsp;low&nbsp;pass&nbsp;filter<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Lo-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Lo(r): low pass filter '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RLo1">class <strong>RLo1</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#RLo1">RLo1</a>(f,r):&nbsp;resonant&nbsp;low&nbsp;pass&nbsp;filter&nbsp;(1)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="RLo1-set_f"><strong>set_f</strong></a>(self, f)</dt></dl>
+
+<dl><dt><a name="RLo1-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' RLo1(f,r): resonant low pass filter (1) '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RLo2">class <strong>RLo2</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#RLo2">RLo2</a>(f,r):&nbsp;resonant&nbsp;low&nbsp;pass&nbsp;filter&nbsp;(2)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="RLo2-set_f"><strong>set_f</strong></a>(self, f)</dt></dl>
+
+<dl><dt><a name="RLo2-set_r"><strong>set_r</strong></a>(self, r)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' RLo2(f,r): resonant low pass filter (2) '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Hi">class <strong>Hi</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Hi">Hi</a>(r):&nbsp;hi&nbsp;pass&nbsp;filter<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Hi(r): hi pass filter '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Env">class <strong>Env</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Env">Env</a>():&nbsp;max&nbsp;abs&nbsp;of&nbsp;each&nbsp;block&nbsp;read<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Env(): max abs of each block read '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RMS">class <strong>RMS</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#RMS">RMS</a>():&nbsp;root&nbsp;mean&nbsp;square&nbsp;over&nbsp;each&nbsp;block&nbsp;read<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' RMS(): root mean square over each block read '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Tap">class <strong>Tap</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Tap-set_i"><strong>set_i</strong></a>(self, i)</dt></dl>
+
+<dl><dt><a name="Tap-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IIR">class <strong>IIR</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#IIR">IIR</a>(line=[]):&nbsp;infinite&nbsp;impulse&nbsp;response&nbsp;filter<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="IIR-__getitem__"><strong>__getitem__</strong></a>(self, idx)</dt></dl>
+
+
+<dl><dt><a name="IIR-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="IIR-add"><strong>add</strong></a>(self, i, x)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' IIR(line=[]): infinite impulse response filter '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Delay">class <strong>Delay</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Delay">Delay</a>(n):&nbsp;output&nbsp;is&nbsp;n&nbsp;samples&nbsp;behind&nbsp;input<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Delay-set_n"><strong>set_n</strong></a>(self, n)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Delay(n): output is n samples behind input '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Trace">class <strong>Trace</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Trace">Trace</a>(x,y,w,h):&nbsp;SDL&nbsp;graphical&nbsp;display&nbsp;of&nbsp;signal<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Trace(x,y,w,h): SDL graphical display of signal '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Lookup">class <strong>Lookup</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Lookup">Lookup</a>(buf=None):&nbsp;use&nbsp;input&nbsp;as&nbsp;index&nbsp;into&nbsp;values&nbsp;in&nbsp;buf<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Lookup-flush"><strong>flush</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Lookup(buf=None): use input as index into values in buf'</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Linear">class <strong>Linear</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Linear">Linear</a>(v,x_init=0):&nbsp;linear&nbsp;spline,&nbsp;<br>
+v&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;(width,level)&nbsp;pairs<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Linear-__getitem__"><strong>__getitem__</strong></a>(self, idx)</dt></dl>
+
+
+<dl><dt><a name="Linear-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Linear-__setitem__"><strong>__setitem__</strong></a>(self, idx, val)</dt></dl>
+
+<dl><dt><a name="Linear-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Linear-append"><strong>append</strong></a>(self, di, x)</dt></dl>
+
+<dl><dt><a name="Linear-pop"><strong>pop</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Linear-update"><strong>update</strong></a>(self, l)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Linear(v,x_init=0): linear spline, <font color="#c040c0">\n</font>    v is a list of (width,level) pairs '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Term">class <strong>Term</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Term">Term</a>(cb=None):&nbsp;ncurses&nbsp;interface,&nbsp;outputs&nbsp;keypresses,&nbsp;behaves&nbsp;like&nbsp;a&nbsp;dict&nbsp;of&nbsp;lines:&nbsp;term[0]="foo"<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Term-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+
+<dl><dt><a name="Term-__setitem__"><strong>__setitem__</strong></a>(self, key, s)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Term(cb=None): ncurses interface, outputs keypresses, behaves like a dict of lines: term[0]="foo" '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GetChar">class <strong>GetChar</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="GetChar-get_char"><strong>get_char</strong></a>(self, rp)</dt></dl>
+
+<dl><dt><a name="GetChar-send"><strong>send</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GetInt">class <strong>GetInt</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="GetInt-get_int"><strong>get_int</strong></a>(self, rp)</dt></dl>
+
+<dl><dt><a name="GetInt-send"><strong>send</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Loop">class <strong>Loop</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;<a href="#Loop">Loop</a>(filename)<br>
+<a href="#Loop">Loop</a>(array,sz=None)<br>
+<a href="#Loop">Loop</a>(mem,sz)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="Loop-clone"><strong>clone</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Loop-get_offset"><strong>get_offset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Loop-seek"><strong>seek</strong></a>(self, offset)</dt><dd><tt>&nbsp;offset&nbsp;is&nbsp;bytecount</tt></dd></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' Loop(filename)<font color="#c040c0">\n</font>  Loop(array,sz=None)<font color="#c040c0">\n</font>  Loop(mem,sz) '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MemTask">class <strong>MemTask</strong></a>(<a href="Sonic.html#Task">Task</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="MemTask-clone"><strong>clone</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MemTask-get_offset"><strong>get_offset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MemTask-seek"><strong>seek</strong></a>(self, offset)</dt><dd><tt>&nbsp;offset&nbsp;is&nbsp;bytecount</tt></dd></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MemRd">class <strong>MemRd</strong></a>(<a href="Sonic.html#MemTask">MemTask</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#MemRd">MemRd</a></dd>
+<dd><a href="Sonic.html#MemTask">MemTask</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MemWr">class <strong>MemWr</strong></a>(<a href="Sonic.html#MemTask">MemTask</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#MemWr">MemWr</a></dd>
+<dd><a href="Sonic.html#MemTask">MemTask</a></dd>
+<dd><a href="Sonic.html#Task">Task</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Array">class <strong>Array</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Array-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Array-__getitem__"><strong>__getitem__</strong></a>(self, i, value)</dt></dl>
+
+
+<dl><dt><a name="Array-__setitem__"><strong>__setitem__</strong></a>(self, i, value)</dt></dl>
+
+<dl><dt><a name="Array-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Array-free"><strong>free</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MMap">class <strong>MMap</strong></a>(<a href="Sonic.html#Array">Array</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="MMap-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SubArray">class <strong>SubArray</strong></a>(<a href="Sonic.html#Array">Array</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<dl><dt><a name="SubArray-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ShortArray">class <strong>ShortArray</strong></a>(<a href="Sonic.html#Array">Array</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Wavetable">class <strong>Wavetable</strong></a>(<a href="Sonic.html#ShortArray">ShortArray</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;build&nbsp;from&nbsp;callable&nbsp;on&nbsp;0&lt;=x&lt;1<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sonic.html#Wavetable">Wavetable</a></dd>
+<dd><a href="Sonic.html#ShortArray">ShortArray</a></dd>
+<dd><a href="Sonic.html#Array">Array</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' build from callable on 0&lt;=x&lt;1 '</dl>
+
+<dl><dt><strong>__module__</strong> = 'Sonic'</dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt><a name="-_find"><strong>_find</strong></a>(name)</dt></dl>
+ <dl><dt><a name="-_print"><strong>_print</strong></a>(x)</dt></dl>
+ <dl><dt><a name="-c2py"><strong>c2py</strong></a>(s, n)</dt></dl>
+ <dl><dt><a name="-connect"><strong>connect</strong></a> = pipe(*args)</dt></dl>
+ <dl><dt><a name="-file_exists"><strong>file_exists</strong></a>(fnam)</dt></dl>
+ <dl><dt><a name="-free_garbage"><strong>free_garbage</strong></a>()</dt></dl>
+ <dl><dt><a name="-free_msg"><strong>free_msg</strong></a>(s)</dt></dl>
+ <dl><dt><a name="-ftos"><strong>ftos</strong></a>(f)</dt></dl>
+ <dl><dt><a name="-get_msg"><strong>get_msg</strong></a>(s)</dt></dl>
+ <dl><dt><a name="-log"><strong>log</strong></a>(*s)</dt></dl>
+ <dl><dt><a name="-mk_msg"><strong>mk_msg</strong></a>()</dt></dl>
+ <dl><dt><a name="-mkloop"><strong>mkloop</strong></a>(func, dx)</dt></dl>
+ <dl><dt><a name="-null_log"><strong>null_log</strong></a>()</dt></dl>
+ <dl><dt><a name="-output"><strong>output</strong></a>(s)</dt></dl>
+ <dl><dt><a name="-pipe"><strong>pipe</strong></a>(*args)</dt></dl>
+ <dl><dt><a name="-set_log"><strong>set_log</strong></a>(file)</dt></dl>
+ <dl><dt><a name="-sleep"><strong>sleep</strong></a>(...)</dt><dd><tt><a href="#-sleep">sleep</a>(seconds)<br>
+&nbsp;<br>
+<a href="#Delay">Delay</a>&nbsp;execution&nbsp;for&nbsp;a&nbsp;given&nbsp;number&nbsp;of&nbsp;seconds.&nbsp;&nbsp;The&nbsp;argument&nbsp;may&nbsp;be<br>
+a&nbsp;floating&nbsp;point&nbsp;number&nbsp;for&nbsp;subsecond&nbsp;precision.</tt></dd></dl>
+ <dl><dt><a name="-time"><strong>time</strong></a>(...)</dt><dd><tt><a href="#-time">time</a>()&nbsp;-&gt;&nbsp;floating&nbsp;point&nbsp;number<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;current&nbsp;time&nbsp;in&nbsp;seconds&nbsp;since&nbsp;the&nbsp;Epoch.<br>
+Fractions&nbsp;of&nbsp;a&nbsp;second&nbsp;may&nbsp;be&nbsp;present&nbsp;if&nbsp;the&nbsp;system&nbsp;clock&nbsp;provides&nbsp;them.</tt></dd></dl>
+ <dl><dt><a name="-xcheck"><strong>xcheck</strong></a>()</dt></dl>
+ <dl><dt><a name="-xmark"><strong>xmark</strong></a>()</dt></dl>
+</td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>MSG_LEN</strong> = 128<br>
+<strong>__file__</strong> = './Sonic.pyc'<br>
+<strong>__name__</strong> = 'Sonic'<br>
+<strong>generators</strong> = _Feature((2, 2, 0, 'alpha', 1), (2, 3, 0, 'final', 0), 4096)<br>
+<strong>hypersonicrc</strong> = '/home/simon/.hypersonicrc'<br>
+<strong>logfile</strong> = &lt;open file '&lt;stdout&gt;', mode 'w'&gt;<br>
+<strong>nested_scopes</strong> = _Feature((2, 1, 0, 'beta', 1), (2, 2, 0, 'alpha', 0), 16)<br>
+<strong>outstr</strong> = {}<br>
+<strong>rcfile</strong> = &lt;open file '/home/simon/.hypersonicrc', mode 'r'&gt;<br>
+<strong>s</strong> = "bufsz = 4096 # default buffer size<font color="#c040c0">\n</font>dsp=(1, 44100, 0) # device, speed, stereo<font color="#c040c0">\n</font>soundcard='OSS'<font color="#c040c0">\n</font>"</td></tr></table>
+</body></html>

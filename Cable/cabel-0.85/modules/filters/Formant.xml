@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Formant" description="Formant filter (be careful with amplitude of output)">
+  <input>
+    <vardef name="in" csType="a" description="Audio rate input"/>
+    <vardef name="fcf" csType="k" value="2000" min="0" description="Filter center frequency"/>
+    <vardef name="atk" csType="k" value="0.01" min="0" max="100" description="Impulse response attack time in seconds"/>
+    <vardef name="dec" csType="k" value="0.003" min="0" max="100" description="Impulse response decay time in seconds"/>
+  </input>
+  <output>
+    <vardef name="out" csType="a" description="Filtered audio signal"/>
+  </output>
+  <opcode>/* Formant filter */
+opcode Formant, a, akkk
+  ain, kfcf, katk, kdec  xin
+
+  kfcf    limit kfcf, 0, 50000
+  katk    limit katk, 0, 100
+  kdec    limit kdec, 0, 100
+  aout    fofilter ain, kfcf, katk, kdec
+
+  xout aout
+endop
+  </opcode>
+</modul>

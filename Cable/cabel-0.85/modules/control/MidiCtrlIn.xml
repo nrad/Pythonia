@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="MidiCtrlIn" description="Get scaled value from MIDI controller">
+  <input>
+    <vardef name="chnl" csType="i" value="1" min="1" max="16" digits="0" description="MIDI channel"/>
+    <vardef name="ccnum" csType="i" value="1" min="1" max="128" digits="0" description="Controller number"/>
+    <vardef name="min" value="0" csType="i" description="Minimal value for scaled controller"/>
+    <vardef name="max" value="127" csType="i" description="Maximal value for scaled controller"/>
+  </input>
+  <output>
+    <vardef name="out" csType="k" description="Scaled MIDI controller value"/>
+  </output>
+  <opcode>/* Get value from MIDI controller */
+opcode MidiCtrlIn, k, iiii
+  ichnl, iccnum, imin, imax  xin
+
+  kout    ctrl7       ichnl, iccnum, imin, imax
+  
+  xout kout
+endop
+  </opcode>
+</modul>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="modul.xsd" name="Panning" description="Pan input signal between the two outputs">
+  <input>
+    <vardef name="in" csType="a" description="Audio rate signal"/>
+    <vardef name="pan" csType="k" value="0" min="0" max="1" description="Pan in between out1 (pan=0) and out2 (pan=1)"/>
+  </input>
+  <output>
+    <vardef name="out1" csType="a" description="First audio output"/>
+    <vardef name="out2" csType="a" description="Second audio output"/>
+  </output>
+  <opcode>/* Pan input signal between the two outputs */
+opcode Panning, aa, ak
+  ain, kpan  xin
+  kpan  limit  kpan, 0, 1
+  aout1 = ain*(1-kpan)
+  aout2 = ain*kpan
+  xout aout1, aout2
+endop
+  </opcode>
+</modul>
